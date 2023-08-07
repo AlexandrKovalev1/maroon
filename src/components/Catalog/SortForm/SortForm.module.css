@@ -1,0 +1,24 @@
+.container {
+    caret-color: transparent;
+}
+
+.form {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.block__errors {
+    position: absolute;
+    color:red;
+    font-weight: bold;
+}
+
+.checkboxGroup:not(:last-child) {
+    margin-right: 50px;
+}
+
+.checkboxGroup:last-child {
+    display: grid;
+    grid-template-rows: 2fr;
+}
