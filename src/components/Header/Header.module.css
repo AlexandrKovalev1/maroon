@@ -1,0 +1,34 @@
+
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding: 0 43px;
+}
+
+.logo{
+ width: 131px;
+ height: 21px;
+}
+
+.header__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.header_list__item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.cabinetSvg {
+    width:16px;
+    height: 21px;
+}
+
+.basketSvg {
+    width: 18px;
+    height: 21px;
+}

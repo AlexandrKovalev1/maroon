@@ -1,0 +1,15 @@
+.card__img {
+    width: 330px;
+    height: 422px;
+}
+.title__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+}
+.icon {
+    width: 26px;
+    height: 12px;
+    stroke:#122947;
+}

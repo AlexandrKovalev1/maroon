@@ -1,0 +1,14 @@
+.customButton {
+    width: 141px;
+    height: 41px;
+    border: 1px solid rgba(179, 186, 193, 1);
+    border-radius: 2px;
+    text-align: center;
+    background-color: inherit;
+    font-weight: 500;
+}
+
+.customButton:hover {
+    border: 2px solid rgba(179, 186, 193, 1); 
+    background-color: rgba(244, 241, 237, 1);
+}

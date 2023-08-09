@@ -1,16 +1,34 @@
-.container {
+.filter__wrapper {
+    position: relative;
+    display: inline-block;
     caret-color: transparent;
 }
 
+.button__close {
+    stroke: black;
+}
+
+.button__close:hover {
+    stroke: red;
+}
+
 .form {
+    right: 50px;
+    position: absolute;
+    width: 85vw;
+    padding: 0 20px;
     display: flex;
     justify-content: space-around;
-    position: relative;
+    z-index: 1;
+    padding-top: 30px;
+    background-color: rgba(248, 248, 246, 1);
+
 }
 
 .block__errors {
     position: absolute;
-    color:red;
+    top:0;
+    color: red;
     font-weight: bold;
 }
 
@@ -21,4 +39,18 @@
 .checkboxGroup:last-child {
     display: grid;
     grid-template-rows: 2fr;
+}
+
+.filter__button__toggle {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttonGroup {
+    padding-top: 15px;
+}
+
+.buttonSubmit {
+    margin-right: 20px;
 }

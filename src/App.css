@@ -1,9 +1,11 @@
 .app__wrapper {
+  display: grid;
+  grid-template-rows: 100px 1fr 195px;
   margin: 0;
   box-sizing: border-box;
   min-width: 320px;
 }
 
-.main {
-  padding: 0 100px;
+.wrapper_homePage {
+  display: block;
 }

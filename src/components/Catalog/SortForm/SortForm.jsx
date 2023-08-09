@@ -3,12 +3,18 @@ import { Field, Formik } from "formik";
 import CheckboxGroup from "./SortFormItems/CheckboxGroup";
 import CheckboxInput from "./SortFormItems/CheckboxInput";
 import { connect } from 'react-redux';
-import {  clearFilters, filterGoods } from '../../../redux/goodsReducer';
-
-
+import { clearFilters, filterGoods } from '../../../redux/goodsReducer';
+import { useState } from 'react';
+import Icon from '../../common/Icon';
+import ButtonCustom from '../../common/ButtonCustom/ButtonCustom';
 
 
 const SortForm = (props) => {
+
+  let [isActiveMode, setActiveMode] = useState(false);
+
+  const show = () => setActiveMode(true);
+  const hidden = () => setActiveMode(false);
 
   const checkingForParametrSelection = (value) => {
     let error;
@@ -34,7 +40,7 @@ const SortForm = (props) => {
       validate={checkingForParametrSelection}
 
       onSubmit={(values, actions) => {
-        props.hidden();
+        hidden();
         actions.resetForm();
         props.filterGoods(values);
         setTimeout(() => {
@@ -50,8 +56,13 @@ const SortForm = (props) => {
         values,
         isSubmitting
       }) => (
-        <div className={classes.container}>
-          <form onSubmit={handleSubmit} onReset={resetForm}   className={classes.form}>
+        <div className={classes.filter__wrapper}>
+          <div className={classes.filter__button__toggle}>
+            {isActiveMode
+              ? <Icon id={'closeButton'} width={20} height={20} onClick={hidden} className={classes.button__close} />
+              : <ButtonCustom onClick={show} title={'Фильтр'} />}
+          </div>
+          {isActiveMode && <form onSubmit={handleSubmit} onReset={resetForm} className={classes.form}>
             {errors[0] && <div className={classes.block__errors}>{Object.values(errors).join('')}</div>}
             <div className={classes.checkboxGroup}>
               <CheckboxGroup
@@ -178,16 +189,24 @@ const SortForm = (props) => {
               </CheckboxGroup>
 
 
-              <div>
-                <button type="submit" disabled={isSubmitting}>
-                  Применить
-                </button>
-                <button type="reset" disabled={isSubmitting} onClick={props.clearFilters}>
-                  Сбросить
-                </button>
+              <div className={classes.buttonGroup}>
+                <ButtonCustom
+                  type={'submit'}
+                  disabled={isSubmitting}
+                  title={'Применить'}
+                  className={classes.buttonSubmit}
+                />
+                <ButtonCustom
+                  type={'reset'}
+                  disabled={isSubmitting}
+                  onClick={props.clearFilters}
+                  title={'Сбросить'}
+                />
+
               </div>
             </div>
-          </form>
+          </form>}
+
         </div>
 
       )}
@@ -198,4 +217,4 @@ const SortForm = (props) => {
 
 
 
-export default connect(null, { filterGoods,clearFilters })(SortForm);
+export default connect(null, { filterGoods, clearFilters })(SortForm);

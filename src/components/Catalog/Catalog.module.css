@@ -1,3 +1,11 @@
+.main {
+    border-top: 1px solid rgba(219, 220, 224, 1); 
+}
+
+.catalog__container {
+    padding: 0 43px;
+}
+
 .heading__block {
     display: flex;
     align-items: center;
