@@ -1,7 +1,7 @@
 import classes from './ButtonCustom.module.css'
 
 
-const ButtonCustom = ({ title, type, disabled, onClick, className,...props }) => {
+const ButtonCustom = ({ title, type, disabled, onClick, className, ...props }) => {
 
     return <>
         <button

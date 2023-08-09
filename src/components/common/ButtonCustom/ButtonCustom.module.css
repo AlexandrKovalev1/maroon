@@ -6,6 +6,7 @@
     text-align: center;
     background-color: inherit;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .customButton:hover {

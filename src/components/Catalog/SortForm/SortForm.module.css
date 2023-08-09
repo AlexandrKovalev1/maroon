@@ -1,6 +1,7 @@
 .filter__wrapper {
     position: relative;
     display: inline-block;
+    width: 100%;
     caret-color: transparent;
 }
 
@@ -15,7 +16,7 @@
 .form {
     right: 50px;
     position: absolute;
-    width: 85vw;
+    width: 100%;
     padding: 0 20px;
     display: flex;
     justify-content: space-around;

@@ -46,4 +46,8 @@
   <symbol id='arrowRight' width="27" height="14" viewBox="0 0 27 14" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 7H26M26 7L19.697 1M26 7L19.697 13" stroke="inherit"/>
     </symbol>
+
+    <symbol id='arrowLeft' width="27" height="14" viewBox="0 0 27 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M27 7H0.999999M0.999999 7L7.30303 1M0.999999 7L7.30303 13" stroke="inherit"/>
+      </symbol>
 </svg>

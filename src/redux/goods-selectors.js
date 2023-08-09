@@ -8,6 +8,10 @@ import { createSelector } from "reselect";
     return state.goods.filteredGoods;
 }
 
+export const getBestSellers = (state) => {
+    return state.goods.bestSellers;
+}
+
 export const getFormatedGoods = createSelector(getGoods, getFilteredGoods,
     (allGoods, filteredGoods) => {
         if (filteredGoods.length > 0) {

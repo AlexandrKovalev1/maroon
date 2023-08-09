@@ -1,6 +1,17 @@
 .container {
-    padding: 0 43px;
+    padding-left: 43px;
+    display: flex;
 }
-.button__bestSellers{
+
+.bestsellers__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 200px;
+    padding-right: 125px;
+}
+
+
+.button__bestSellers {
     width: 155px;
 }

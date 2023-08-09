@@ -11,14 +11,14 @@ const FullPage = () => {
         <>
             <section className={classes.section__bestsellers}>
                 <div className={classes.container}>
-                    <div>
+                    <div className={classes.bestsellers__description}>
                         <h3>Бестселлеры</h3>
                         <p>
-                            Легендарные продукты, <br />
-                            завоевавшие любовь <br />
-                            наших клиентов
+                            {`Легендарные продукты, 
+                            завоевавшие любовь
+                            наших клиентов`}
                         </p>
-                        <ButtonCustom title={'Смотреть все'} className={classes.button__bestSellers}/>
+                        <ButtonCustom title={'Смотреть все'} className={classes.button__bestSellers} />
                     </div>
                     <SliderBestSellers />
                 </div>
