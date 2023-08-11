@@ -20,9 +20,14 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+.card__heading {
+    font-weight: 500;
+}
 
 .card__description {
+    font-size: 13px;
     color: rgba(154, 157, 160, 1);
+    
 }
 
 .bestsellers__link {

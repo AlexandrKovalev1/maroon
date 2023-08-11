@@ -1,0 +1,19 @@
+.section__banner {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.banner__description__wrapper {
+    position: absolute;
+    top: 25%;
+    right: 20%;
+    max-width: 280px;
+}
+
+.bunner__description {
+    font-size: 18px;
+}

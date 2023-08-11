@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import classes from './SliderBestSellers.module.css'
-import { getBestSellers } from '../../../../redux/goods-selectors';
+import { getBestSellers } from '../../../../../redux/goods-selectors';
 import BestSellerCard from './BestSellerCard/BestSellerCard';
-import Icon from '../../../common/Icon';
+import Icon from '../../../../common/Icon';
 import { useState } from 'react';
 const STAPE_WIDTH = 290;
 

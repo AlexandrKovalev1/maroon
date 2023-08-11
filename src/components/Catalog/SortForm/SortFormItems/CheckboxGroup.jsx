@@ -18,7 +18,7 @@ const CheckboxGroup = ({value,id,onChange,children,headingGroup,className,...val
 
   return (
           <div className={className}>
-            <h4>{headingGroup}</h4>
+      <h4 style={{fontSize:'18px'}}>{headingGroup}</h4>
           {React.Children.map(children, child => {
             return React.cloneElement(child, {
               field: {

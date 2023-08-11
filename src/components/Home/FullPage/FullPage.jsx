@@ -2,44 +2,20 @@ import classes from './FullPage.module.css'
 import { NavLink } from "react-router-dom"
 import ButtonCustom from "../../common/ButtonCustom/ButtonCustom"
 import Footer from '../../Footer/Footer'
-import SliderBestSellers from './SliderBestsellers/SliderBestSellers'
+import SectionBestSellers from './SectionBestSellers/SectionBestSellers'
+import SectionBunner from './SectionBunner/SectionBunner'
+import SectionOffer from './SectionOffer/SectionOffer'
 
 
 
 const FullPage = () => {
     return (
         <>
-            <section className={classes.section__bestsellers}>
-                <div className={classes.container}>
-                    <div className={classes.bestsellers__description}>
-                        <h3>Бестселлеры</h3>
-                        <p>
-                            {`Легендарные продукты, 
-                            завоевавшие любовь
-                            наших клиентов`}
-                        </p>
-                        <ButtonCustom title={'Смотреть все'} className={classes.button__bestSellers} />
-                    </div>
-                    <SliderBestSellers />
-                </div>
+            <SectionBestSellers />
 
-            </section>
+            <SectionBunner />
 
-            <section>
-                <div>
-                    <h3></h3>
-                    <p></p>
-                    <ButtonCustom />
-                </div>
-            </section>
-
-            <section>
-                <div>
-                    <h3></h3>
-                    <p></p>
-                    <ButtonCustom />
-                </div>
-            </section>
+            <SectionOffer />
 
             <section>
                 <p></p>
