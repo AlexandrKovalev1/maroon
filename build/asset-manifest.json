@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fbdf11c3.css",
+    "main.js": "/static/js/main.d39997b3.js",
+    "static/js/787.577b8feb.chunk.js": "/static/js/787.577b8feb.chunk.js",
+    "static/media/forBody.png": "/static/media/forBody.beeb8044831b103318f8.png",
+    "static/media/Lavender.png": "/static/media/Lavender.73cbdd19fbdfd2b55607.png",
+    "static/media/Clean.png": "/static/media/Clean.dd808fdd50578ecfd630.png",
+    "static/media/backgroundPrevCard.jpg": "/static/media/backgroundPrevCard.92a494dc76fe5c862e3f.jpg",
+    "static/media/forFace.jpg": "/static/media/forFace.fd4c4290e7cd045d4a40.jpg",
+    "static/media/Paradise.png": "/static/media/Paradise.0651a44241a2de601bcb.png",
+    "static/media/Coconut.png": "/static/media/Coconut.064c5a3dbc7a5093e410.png",
+    "static/media/Earth.png": "/static/media/Earth.04587ec1c43d6dacaed3.png",
+    "static/media/High.png": "/static/media/High.f71f001509381d941403.png",
+    "static/media/Milk.png": "/static/media/Milk.47a197ea73292f81576b.png",
+    "static/media/Rose.png": "/static/media/Rose.c17b5667f754e669f679.png",
+    "static/media/Sun.png": "/static/media/Sun.4f517716bbfa31651006.png",
+    "static/media/Lotos.png": "/static/media/Lotos.61d38bf5cbbc93597dfe.png",
+    "static/media/Rest.png": "/static/media/Rest.bdb9425b0903cbf5784d.png",
+    "static/media/Violet.png": "/static/media/Violet.5a2bec7413e91838806e.png",
+    "static/media/svg_sprite.svg": "/static/media/svg_sprite.02ae11cc95a15b1db131de6c4227abaa.svg",
+    "index.html": "/index.html",
+    "main.fbdf11c3.css.map": "/static/css/main.fbdf11c3.css.map",
+    "main.d39997b3.js.map": "/static/js/main.d39997b3.js.map",
+    "787.577b8feb.chunk.js.map": "/static/js/787.577b8feb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fbdf11c3.css",
+    "static/js/main.d39997b3.js"
+  ]
+}
