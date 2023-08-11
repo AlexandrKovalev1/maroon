@@ -331,7 +331,7 @@ let initialState = {
         },
     ],
     filteredGoods: [],
-    bestSellers:[
+    bestSellers: [
         {
             id: 1,
             coverPicture: highCover,
@@ -655,7 +655,7 @@ const goodsReducer = (state = initialState, action) => {
         case FILTER_GOODS:
             if (action.params && Object.keys(action.params).length > 0) {
 
-                let { forFace, forBody, forSkinType } = action.params;
+                let { forFace = [], forBody = [], forSkinType = [] } = action.params;
                 let goodsType = [...forFace, ...forBody];
                 let filteredGoods = state.allGoods;
 
