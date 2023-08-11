@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/maroon/static/css/main.fbdf11c3.css",
+    "main.js": "/maroon/static/js/main.7f3a439f.js",
+    "static/js/787.577b8feb.chunk.js": "/maroon/static/js/787.577b8feb.chunk.js",
+    "static/media/forBody.png": "/maroon/static/media/forBody.beeb8044831b103318f8.png",
+    "static/media/Lavender.png": "/maroon/static/media/Lavender.73cbdd19fbdfd2b55607.png",
+    "static/media/Clean.png": "/maroon/static/media/Clean.dd808fdd50578ecfd630.png",
+    "static/media/backgroundPrevCard.jpg": "/maroon/static/media/backgroundPrevCard.92a494dc76fe5c862e3f.jpg",
+    "static/media/forFace.jpg": "/maroon/static/media/forFace.fd4c4290e7cd045d4a40.jpg",
+    "static/media/Paradise.png": "/maroon/static/media/Paradise.0651a44241a2de601bcb.png",
+    "static/media/Coconut.png": "/maroon/static/media/Coconut.064c5a3dbc7a5093e410.png",
+    "static/media/Earth.png": "/maroon/static/media/Earth.04587ec1c43d6dacaed3.png",
+    "static/media/High.png": "/maroon/static/media/High.f71f001509381d941403.png",
+    "static/media/Milk.png": "/maroon/static/media/Milk.47a197ea73292f81576b.png",
+    "static/media/Rose.png": "/maroon/static/media/Rose.c17b5667f754e669f679.png",
+    "static/media/Sun.png": "/maroon/static/media/Sun.4f517716bbfa31651006.png",
+    "static/media/Lotos.png": "/maroon/static/media/Lotos.61d38bf5cbbc93597dfe.png",
+    "static/media/Rest.png": "/maroon/static/media/Rest.bdb9425b0903cbf5784d.png",
+    "static/media/Violet.png": "/maroon/static/media/Violet.5a2bec7413e91838806e.png",
+    "static/media/svg_sprite.svg": "/maroon/static/media/svg_sprite.02ae11cc95a15b1db131de6c4227abaa.svg",
+    "index.html": "/maroon/index.html",
+    "main.fbdf11c3.css.map": "/maroon/static/css/main.fbdf11c3.css.map",
+    "main.7f3a439f.js.map": "/maroon/static/js/main.7f3a439f.js.map",
+    "787.577b8feb.chunk.js.map": "/maroon/static/js/787.577b8feb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fbdf11c3.css",
+    "static/js/main.7f3a439f.js"
+  ]
+}
