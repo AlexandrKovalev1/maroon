@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/maroon/static/css/main.a82d54d4.css",
-    "main.js": "/maroon/static/js/main.89d19fe5.js",
+    "main.css": "/maroon/static/css/main.aca2b9d9.css",
+    "main.js": "/maroon/static/js/main.db44b6a3.js",
     "static/js/787.577b8feb.chunk.js": "/maroon/static/js/787.577b8feb.chunk.js",
     "static/media/ourHistory.jpg": "/maroon/static/media/ourHistory.6c1691eda2dbde12b34d.jpg",
     "static/media/offer.jpg": "/maroon/static/media/offer.c91571fdb37de859c1a9.jpg",
@@ -29,12 +29,12 @@
     "static/media/joinUs6.jpg": "/maroon/static/media/joinUs6.21a753d01aa13685d67a.jpg",
     "static/media/svg_sprite.svg": "/maroon/static/media/svg_sprite.02ae11cc95a15b1db131de6c4227abaa.svg",
     "index.html": "/maroon/index.html",
-    "main.a82d54d4.css.map": "/maroon/static/css/main.a82d54d4.css.map",
-    "main.89d19fe5.js.map": "/maroon/static/js/main.89d19fe5.js.map",
+    "main.aca2b9d9.css.map": "/maroon/static/css/main.aca2b9d9.css.map",
+    "main.db44b6a3.js.map": "/maroon/static/js/main.db44b6a3.js.map",
     "787.577b8feb.chunk.js.map": "/maroon/static/js/787.577b8feb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a82d54d4.css",
-    "static/js/main.89d19fe5.js"
+    "static/css/main.aca2b9d9.css",
+    "static/js/main.db44b6a3.js"
   ]
 }

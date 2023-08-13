@@ -20,7 +20,9 @@ const SectionOffer = () => {
                     <ButtonCustom title={'Заполнить анкету'} className={classes.button} />
                 </div>
             </div>
-            <img className={classes.img} src={offerImg} alt="offer img" />
+            <div className={classes.img__wrapper}>
+                <img className={classes.img} src={offerImg} alt="offer img" />
+            </div>
 
         </section>
     )
