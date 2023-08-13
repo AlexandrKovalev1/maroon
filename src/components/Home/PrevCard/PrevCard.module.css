@@ -37,8 +37,14 @@
     font-size: 18px;
 }
 
-@media screen and (max-width: 1150px) {
+@media (max-width: 1150px) {
     .block__info {
         margin-left: -13%;
+    }
+}
+
+@media (max-width: 768px) {
+    .prevCard__wrapper {
+        margin-bottom: 110px;
     }
 }

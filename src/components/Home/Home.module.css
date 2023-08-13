@@ -2,3 +2,9 @@
 .home__wrapper >*+*:not(:last-child){
     margin-bottom: 160px;
 }
+
+@media (max-width:768px) {
+    .home__wrapper >*+*:not(:last-child){
+        margin-bottom: 110px;
+    }
+}
