@@ -1,6 +1,7 @@
 .section__offer {
     position: relative;
     display: grid;
+    width: 100%;
     align-items: center;
     padding-left: 77px;
 }
