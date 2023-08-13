@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/maroon/static/css/main.fbdf11c3.css",
-    "main.js": "/maroon/static/js/main.7f3a439f.js",
+    "main.css": "/maroon/static/css/main.bf40d3e7.css",
+    "main.js": "/maroon/static/js/main.e23c5d60.js",
     "static/js/787.577b8feb.chunk.js": "/maroon/static/js/787.577b8feb.chunk.js",
+    "static/media/banner.jpg": "/maroon/static/media/banner.93970001c095662242da.jpg",
     "static/media/forBody.png": "/maroon/static/media/forBody.beeb8044831b103318f8.png",
     "static/media/Lavender.png": "/maroon/static/media/Lavender.73cbdd19fbdfd2b55607.png",
     "static/media/Clean.png": "/maroon/static/media/Clean.dd808fdd50578ecfd630.png",
@@ -20,12 +21,12 @@
     "static/media/Violet.png": "/maroon/static/media/Violet.5a2bec7413e91838806e.png",
     "static/media/svg_sprite.svg": "/maroon/static/media/svg_sprite.02ae11cc95a15b1db131de6c4227abaa.svg",
     "index.html": "/maroon/index.html",
-    "main.fbdf11c3.css.map": "/maroon/static/css/main.fbdf11c3.css.map",
-    "main.7f3a439f.js.map": "/maroon/static/js/main.7f3a439f.js.map",
+    "main.bf40d3e7.css.map": "/maroon/static/css/main.bf40d3e7.css.map",
+    "main.e23c5d60.js.map": "/maroon/static/js/main.e23c5d60.js.map",
     "787.577b8feb.chunk.js.map": "/maroon/static/js/787.577b8feb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fbdf11c3.css",
-    "static/js/main.7f3a439f.js"
+    "static/css/main.bf40d3e7.css",
+    "static/js/main.e23c5d60.js"
   ]
 }

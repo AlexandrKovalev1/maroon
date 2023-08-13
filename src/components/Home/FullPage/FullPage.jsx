@@ -5,6 +5,7 @@ import Footer from '../../Footer/Footer'
 import SectionBestSellers from './SectionBestSellers/SectionBestSellers'
 import SectionBunner from './SectionBunner/SectionBunner'
 import SectionOffer from './SectionOffer/SectionOffer'
+import SectionOurHistory from './SectionOurHistory/SectionOurHistory'
 
 
 
@@ -17,18 +18,9 @@ const FullPage = () => {
 
             <SectionOffer />
 
-            <section>
-                <p></p>
-                <ButtonCustom />
-            </section>
+            <SectionOurHistory />
 
-            <section>
-                <div>
-                    <h3></h3>
-                    <p></p>
-                    <ButtonCustom />
-                </div>
-            </section>
+
 
             <section>
                 <div>
