@@ -3,6 +3,8 @@
     display: grid;
     align-items: center;
     padding-left: 77px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .description__block {
@@ -12,7 +14,7 @@
     min-height: 583px;
     padding-left: 76px;
     background-color: rgba(244, 241, 237, 1);
-
+    box-sizing: border-box;
 }
 
 .description__content {
