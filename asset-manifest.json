@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/maroon/static/css/main.e0a6e340.css",
-    "main.js": "/maroon/static/js/main.db44b6a3.js",
+    "main.css": "/maroon/static/css/main.23057a3c.css",
+    "main.js": "/maroon/static/js/main.05b623c7.js",
     "static/js/787.577b8feb.chunk.js": "/maroon/static/js/787.577b8feb.chunk.js",
     "static/media/ourHistory.jpg": "/maroon/static/media/ourHistory.6c1691eda2dbde12b34d.jpg",
     "static/media/offer.jpg": "/maroon/static/media/offer.c91571fdb37de859c1a9.jpg",
@@ -20,21 +20,23 @@
     "static/media/Sun.png": "/maroon/static/media/Sun.4f517716bbfa31651006.png",
     "static/media/joinUs3.jpg": "/maroon/static/media/joinUs3.966259bb2e2f2e3ad8d5.jpg",
     "static/media/Lotos.png": "/maroon/static/media/Lotos.61d38bf5cbbc93597dfe.png",
+    "static/media/offerMobaile.jpg": "/maroon/static/media/offerMobaile.8f378610e097109833da.jpg",
     "static/media/Rest.png": "/maroon/static/media/Rest.bdb9425b0903cbf5784d.png",
     "static/media/Violet.png": "/maroon/static/media/Violet.5a2bec7413e91838806e.png",
     "static/media/joinUs5.jpg": "/maroon/static/media/joinUs5.41befdb2746b73793465.jpg",
     "static/media/joinUs2.jpg": "/maroon/static/media/joinUs2.5ad5e8a6a0c4a8d145e4.jpg",
     "static/media/joinUs4.jpg": "/maroon/static/media/joinUs4.076811169c74c71deece.jpg",
     "static/media/joinUs1.jpg": "/maroon/static/media/joinUs1.47b848b535ef2a2f1175.jpg",
+    "static/media/bannerSmall.jpg": "/maroon/static/media/bannerSmall.5397f043ba2d9968a993.jpg",
     "static/media/joinUs6.jpg": "/maroon/static/media/joinUs6.21a753d01aa13685d67a.jpg",
-    "static/media/svg_sprite.svg": "/maroon/static/media/svg_sprite.02ae11cc95a15b1db131de6c4227abaa.svg",
+    "static/media/svg_sprite.svg": "/maroon/static/media/svg_sprite.2be6993d958d310efb4bdec986b7af46.svg",
     "index.html": "/maroon/index.html",
-    "main.e0a6e340.css.map": "/maroon/static/css/main.e0a6e340.css.map",
-    "main.db44b6a3.js.map": "/maroon/static/js/main.db44b6a3.js.map",
+    "main.23057a3c.css.map": "/maroon/static/css/main.23057a3c.css.map",
+    "main.05b623c7.js.map": "/maroon/static/js/main.05b623c7.js.map",
     "787.577b8feb.chunk.js.map": "/maroon/static/js/787.577b8feb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e0a6e340.css",
-    "static/js/main.db44b6a3.js"
+    "static/css/main.23057a3c.css",
+    "static/js/main.05b623c7.js"
   ]
 }
