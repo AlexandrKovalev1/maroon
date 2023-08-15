@@ -1,6 +1,6 @@
 .section__ourHistory {
     display: grid;
-    place-items:center;
+    place-items: center;
     width: 100%;
     min-height: 433px;
     background-position: center;
@@ -21,8 +21,20 @@
     width: 163px;
 }
 
+
+
 @media (max-width:768px) {
+
+    .section__ourHistory {
+        background-position: right;
+    }
+
     .ourHistory__description {
-        padding: 0 20px;
+        padding: 0 38px;
+    }
+
+    .ourHistory__description__heading {
+        font-size: 22px;
+        padding-bottom: 29px;
     }
 }

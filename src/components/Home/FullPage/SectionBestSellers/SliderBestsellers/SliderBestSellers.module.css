@@ -5,7 +5,6 @@
 
 .block__bestsellers__cards {
     display: flex;
-
     transition: translate;
     transition-property: transform;
     transition-duration: 300ms;
@@ -29,4 +28,22 @@
 
 .button__arrow:hover {
     stroke-width: 2px;
+}
+
+@media (max-width: 768px) {
+    .block__bestsellers__control {
+        padding-right: 0;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 500px) {
+    .block__bestsellers__cards {
+        padding-left: 40px;
+    }
+
+    .block__bestsellers__control {
+        display: none;
+    }
+
 }

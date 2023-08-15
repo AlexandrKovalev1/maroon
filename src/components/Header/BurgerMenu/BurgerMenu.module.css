@@ -1,0 +1,51 @@
+.button__close {
+    stroke: #122947;
+}
+
+.menu__button {
+    position: relative;
+}
+
+div.menu__button svg {
+    cursor: pointer;
+}
+
+.menu__body {
+    position: absolute;
+    left: 0;
+    min-height: 440px;
+    margin-top: 40px;
+    padding-left: 45px;
+    padding-top: 49px;
+    width: 100%;
+    font-size: 32px;
+    background-color: rgba(248, 248, 246, 1);
+    z-index: 5;
+}
+
+div.menu__body ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; 
+}
+
+.burger__list__item:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.burger__list__item span:not(:last-child) {
+    margin-right: 24px;
+}
+
+@media (max-width: 768px) {
+
+    .menu__body {
+        padding-left: 15px;
+        padding-top: 40px;
+    }
+
+    .burger__list__item span:not(:last-child) {
+        margin-right: 29px;
+    }
+
+}

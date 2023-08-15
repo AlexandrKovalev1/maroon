@@ -11,9 +11,7 @@ const SectionBestSellers = () => {
                 <div className={classes.bestsellers__description}>
                     <h3 className={classes.heading}>Бестселлеры</h3>
                     <p className={classes.card__description}>
-                        {`Легендарные продукты, 
-                    завоевавшие любовь
-                    наших клиентов`}
+                        Легендарные продукты,<br />завоевавшие любовь<br />наших клиентов<br />
                     </p>
                     <ButtonCustom title={'Смотреть все'} className={classes.button__bestSellers} />
                 </div>

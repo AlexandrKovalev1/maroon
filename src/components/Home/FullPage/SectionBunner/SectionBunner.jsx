@@ -1,10 +1,17 @@
 import ButtonCustom from '../../../common/ButtonCustom/ButtonCustom'
 import classes from './SectionBunner.module.css'
 import banner from '../../../../img/home/banner.jpg'
+import bannerSmall from '../../../../img/home/bannerSmall.jpg'
+import useResizeWidth from '../../../common/hooks/useResizeWidth'
+
 
 const SectionBunner = () => {
+
+    let widthScreen = useResizeWidth();
+
+    let backgroundImage = widthScreen > 768 ? banner : bannerSmall;
     return (
-        <section className={classes.section__banner} style={{ backgroundImage: `url(${banner})` }}>
+        <section className={classes.section__banner} style={{ backgroundImage: `url(${backgroundImage})` }}>
             <div className={classes.banner__description__wrapper} >
                 <h3 className={classes.heading}>
                     Встречайте весну <br />вместе с нами

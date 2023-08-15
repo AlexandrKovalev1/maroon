@@ -1,6 +1,5 @@
 .prevCard__wrapper {
     position: relative;
-    min-height: 650px;
     margin-bottom: 160px;
     background-position: center;
     background-size: cover;
@@ -8,17 +7,27 @@
 }
 
 .container {
+    position: relative;
     display: flex;
     justify-content: space-between;
-    padding: 48px 134px 91px 134px;
+    padding: 31px 168px 68px 168px;
+}
+
+.cardItem {
+    max-width: 330px;
+    min-width: 250px;
+}
+
+.block__info__wrapper {
+    position: relative;
+    min-width: 140px;
 }
 
 .block__info {
     position: absolute;
-    left: 50%;
     top: 50%;
-    margin-left: -10%;
-    margin-top: -10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,14 +46,58 @@
     font-size: 18px;
 }
 
-@media (max-width: 1150px) {
-    .block__info {
-        margin-left: -13%;
+@media (max-width:900px) {
+    .prevCard__wrapper {
+        margin-bottom: 110px;
+    }
+
+    .container {
+        padding: 31px 45px 68px 45px;
+    }
+
+    .cardItem {
+        max-width: 245px;
+        flex-shrink: 0;
+    }
+
+    .heading {
+        font-size: 54px;
     }
 }
 
+
 @media (max-width: 768px) {
     .prevCard__wrapper {
-        margin-bottom: 110px;
+        margin-bottom: 80px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            'desc desc'
+            'card1 card2'
+        ;
+        gap: 30px;
+        padding: 31px 15px 68px 15px;
+    }
+
+    .block__info__wrapper {
+        grid-area: desc;
+        min-width: 0;
+    }
+
+    .block__info {
+        position: relative;
+    }
+
+    .cardItem {
+        max-width: none;
+        min-width: 0;
+    }
+
+    .button {
+        width: 132px;
+        height: 40px;
     }
 }

@@ -1,10 +1,6 @@
 .container {
-    padding-left: 77px;
     display: flex;
-}
-
-.card__description {
-    font-size: 18px;
+    padding-left: 98px;
 }
 
 .bestsellers__description {
@@ -18,4 +14,31 @@
 
 .button__bestSellers {
     width: 155px;
+}
+
+@media (max-width: 900px) {
+    .container {
+        padding-left: 45px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        position: relative;
+        display: grid;
+        grid-template-rows: 1fr 3fr;
+        padding-left: 15px;
+    }
+    .bestsellers__description {
+        padding: 0;
+        place-items: center;
+        text-align: center;
+    }
+
+    .button__bestSellers {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        translate: -50% 0;
+    }
 }

@@ -1,10 +1,20 @@
+.main{
+    background-color: rgba(248, 248, 246, 1);
+}
+
 
 .home__wrapper >*+*:not(:last-child){
     margin-bottom: 160px;
 }
 
-@media (max-width:768px) {
+@media (max-width:900px) {
     .home__wrapper >*+*:not(:last-child){
         margin-bottom: 110px;
+    }
+}
+
+@media (max-width:768px) {
+    .home__wrapper >*+*:not(:last-child){
+        margin-bottom: 80px;
     }
 }

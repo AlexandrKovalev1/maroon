@@ -10,7 +10,7 @@ const Catalog = (props) => {
     useEffect(() => {
         return () => { props.clearFilters() }
     }, [])
-    console.log('sddsvdsv')
+
     return (
         <main className={classes.main}>
             <div className={classes.catalog__container}>

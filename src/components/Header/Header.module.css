@@ -1,16 +1,19 @@
-
-
 .header__container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
     align-items: center;
-    justify-content: space-between;
     height: 100px;
-    padding: 0 77px;
+    padding: 0 98px;
 }
 
-.logo{
- width: 131px;
- height: 21px;
+
+.burger__menu {
+    display: none;
+}
+
+.menu {
+    display: grid;
+    justify-content: flex-end;
 }
 
 .header__list {
@@ -25,12 +28,29 @@
     margin-right: 40px;
 }
 
-.cabinetSvg {
-    width:16px;
-    height: 21px;
+
+@media (max-width: 900px) {
+    .logo {
+        text-align: center;
+    }
+
+    .burger__menu {
+        display: block;
+    }
+
+    .header__list li:nth-child(-n+3) {
+        display: none;
+    }
+
+    .header__container {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 0 45px;
+    }
 }
 
-.basketSvg {
-    width: 18px;
-    height: 21px;
+@media (max-width: 768px) {
+    .header__container {
+        padding: 0 15px;
+    }
+
 }
