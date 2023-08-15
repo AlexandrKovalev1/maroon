@@ -28,6 +28,7 @@
         display: grid;
         grid-template-rows: 1fr 3fr;
         padding-left: 15px;
+        padding-bottom: 30px;
     }
     .bestsellers__description {
         padding: 0;

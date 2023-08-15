@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/maroon/static/css/main.23057a3c.css",
+    "main.css": "/maroon/static/css/main.91b29b0a.css",
     "main.js": "/maroon/static/js/main.05b623c7.js",
     "static/js/787.577b8feb.chunk.js": "/maroon/static/js/787.577b8feb.chunk.js",
     "static/media/ourHistory.jpg": "/maroon/static/media/ourHistory.6c1691eda2dbde12b34d.jpg",
@@ -31,12 +31,12 @@
     "static/media/joinUs6.jpg": "/maroon/static/media/joinUs6.21a753d01aa13685d67a.jpg",
     "static/media/svg_sprite.svg": "/maroon/static/media/svg_sprite.2be6993d958d310efb4bdec986b7af46.svg",
     "index.html": "/maroon/index.html",
-    "main.23057a3c.css.map": "/maroon/static/css/main.23057a3c.css.map",
+    "main.91b29b0a.css.map": "/maroon/static/css/main.91b29b0a.css.map",
     "main.05b623c7.js.map": "/maroon/static/js/main.05b623c7.js.map",
     "787.577b8feb.chunk.js.map": "/maroon/static/js/787.577b8feb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.23057a3c.css",
+    "static/css/main.91b29b0a.css",
     "static/js/main.05b623c7.js"
   ]
 }
