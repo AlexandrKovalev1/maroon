@@ -7,9 +7,10 @@ import useResizeWidth from '../../../common/hooks/useResizeWidth'
 
 const SectionBunner = () => {
 
-    let widthScreen = useResizeWidth();
+    let currentWidth = useResizeWidth();
 
-    let backgroundImage = widthScreen > 768 ? banner : bannerSmall;
+    let backgroundImage = currentWidth > 768 ? banner : bannerSmall;
+    
     return (
         <section className={classes.section__banner} style={{ backgroundImage: `url(${backgroundImage})` }}>
             <div className={classes.banner__description__wrapper} >

@@ -1,8 +1,15 @@
 import classes from './SectionOffer.module.css'
 import ButtonCustom from '../../../common/ButtonCustom/ButtonCustom'
 import offerImg from '../../../../img/home/offer.jpg'
+import offerMobile from '../../../../img/home/offerMobaile.jpg'
+import useResizeWidth from '../../../common/hooks/useResizeWidth'
 
 const SectionOffer = () => {
+
+    let currentWidth = useResizeWidth();
+
+    let sectionImg = currentWidth >= 768 ? offerImg : offerMobile;
+
     return (
         <section className={classes.section__offer}>
             <div className={classes.description__block}>
@@ -21,7 +28,7 @@ const SectionOffer = () => {
                 </div>
             </div>
             <div className={classes.img__wrapper}>
-                <img className={classes.img} src={offerImg} alt="offer img" />
+                <img className={classes.img} src={sectionImg} alt="offer img" />
             </div>
 
         </section>
