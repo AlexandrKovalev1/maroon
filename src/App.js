@@ -13,7 +13,7 @@ const App = ({ router, ...props }) => {
 
   let urlPathName = router.location.pathname;
   let homePage = urlPathName === '/home'
-  if (urlPathName === '/' || urlPathName === '/maroon') { return <Navigate to={'/home'} /> };
+  if (urlPathName === '/' || urlPathName === '/maroon/') { return <Navigate to={'/home'} /> };
 
 
 

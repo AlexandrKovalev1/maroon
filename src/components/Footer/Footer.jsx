@@ -43,7 +43,7 @@ const Footer = () => {
             </div>
             <div className={classes.copirates__wrapper}>
                 <div className={classes.container}>
-                    <span>
+                    <span className={classes.copirates__string}>
                         <small style={{ paddingRight: '3px' }}>Maroon</small>
                         <Icon id={'copirates'} width={14} height={14} />
                         <small style={{ paddingLeft: '3px' }}>2020 Все права защищены</small>
