@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/maroon/static/css/main.91b29b0a.css",
-    "main.js": "/maroon/static/js/main.05b623c7.js",
+    "main.css": "/maroon/static/css/main.73362a8e.css",
+    "main.js": "/maroon/static/js/main.dbd0ca61.js",
     "static/js/787.577b8feb.chunk.js": "/maroon/static/js/787.577b8feb.chunk.js",
     "static/media/ourHistory.jpg": "/maroon/static/media/ourHistory.6c1691eda2dbde12b34d.jpg",
     "static/media/offer.jpg": "/maroon/static/media/offer.c91571fdb37de859c1a9.jpg",
+    "static/media/map.jpg": "/maroon/static/media/map.3356f6069610b0ae7ef6.jpg",
     "static/media/banner.jpg": "/maroon/static/media/banner.93970001c095662242da.jpg",
     "static/media/forBody.png": "/maroon/static/media/forBody.beeb8044831b103318f8.png",
     "static/media/Lavender.png": "/maroon/static/media/Lavender.73cbdd19fbdfd2b55607.png",
@@ -12,6 +13,7 @@
     "static/media/backgroundPrevCard.jpg": "/maroon/static/media/backgroundPrevCard.92a494dc76fe5c862e3f.jpg",
     "static/media/forFace.jpg": "/maroon/static/media/forFace.fd4c4290e7cd045d4a40.jpg",
     "static/media/Paradise.png": "/maroon/static/media/Paradise.0651a44241a2de601bcb.png",
+    "static/media/mapMobile.jpg": "/maroon/static/media/mapMobile.27908484ed6c225fddf0.jpg",
     "static/media/Coconut.png": "/maroon/static/media/Coconut.064c5a3dbc7a5093e410.png",
     "static/media/Earth.png": "/maroon/static/media/Earth.04587ec1c43d6dacaed3.png",
     "static/media/High.png": "/maroon/static/media/High.f71f001509381d941403.png",
@@ -29,14 +31,14 @@
     "static/media/joinUs1.jpg": "/maroon/static/media/joinUs1.47b848b535ef2a2f1175.jpg",
     "static/media/bannerSmall.jpg": "/maroon/static/media/bannerSmall.5397f043ba2d9968a993.jpg",
     "static/media/joinUs6.jpg": "/maroon/static/media/joinUs6.21a753d01aa13685d67a.jpg",
-    "static/media/svg_sprite.svg": "/maroon/static/media/svg_sprite.2be6993d958d310efb4bdec986b7af46.svg",
+    "static/media/svg_sprite.svg": "/maroon/static/media/svg_sprite.e13b5cda3645d3016393a09ec9588ea7.svg",
     "index.html": "/maroon/index.html",
-    "main.91b29b0a.css.map": "/maroon/static/css/main.91b29b0a.css.map",
-    "main.05b623c7.js.map": "/maroon/static/js/main.05b623c7.js.map",
+    "main.73362a8e.css.map": "/maroon/static/css/main.73362a8e.css.map",
+    "main.dbd0ca61.js.map": "/maroon/static/js/main.dbd0ca61.js.map",
     "787.577b8feb.chunk.js.map": "/maroon/static/js/787.577b8feb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.91b29b0a.css",
-    "static/js/main.05b623c7.js"
+    "static/css/main.73362a8e.css",
+    "static/js/main.dbd0ca61.js"
   ]
 }

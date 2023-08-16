@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom'
 import Icon from '../common/Icon'
 import classes from './Header.module.css'
 import BurgerMenu from './BurgerMenu/BurgerMenu'
+import Logo from '../common/Logo/Logo'
 
 const Header = () => {
 
@@ -12,11 +13,9 @@ const Header = () => {
                     <BurgerMenu />
                 </div>
                 <div className={classes.logo}>
-                    <NavLink to={'/home'}>
-                        <Icon id={'logo'} width={'131'} height={'21'}/>
-                    </NavLink>
+                    <Logo />
                 </div>
-                <div className={classes.menu}>
+                <nav className={classes.menu}>
                     <ul className={classes.header__list}>
                         <li className={classes.header_list__item}>
                             <NavLink to={'/catalog'}>
@@ -29,13 +28,13 @@ const Header = () => {
                             </NavLink>
                         </li>
                         <li className={classes.header_list__item}>
-                            <NavLink>
+                            <NavLink >
                                 Контакты
                             </NavLink>
                         </li>
                         <li className={classes.header_list__item}>
                             <NavLink>
-                                <Icon id={'cabinet'} width={'16'} height={'21'}/>
+                                <Icon id={'cabinet'} width={'16'} height={'21'} />
 
                             </NavLink>
                         </li>
@@ -45,7 +44,7 @@ const Header = () => {
                             </NavLink>
                         </li>
                     </ul>
-                </div>
+                </nav>
             </div>
         </header>
     )

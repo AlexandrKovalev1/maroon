@@ -1,5 +1,3 @@
-import classes from './FullPage.module.css'
-import { NavLink } from "react-router-dom"
 import Footer from '../../Footer/Footer'
 import SectionBestSellers from './SectionBestSellers/SectionBestSellers'
 import SectionBunner from './SectionBunner/SectionBunner'

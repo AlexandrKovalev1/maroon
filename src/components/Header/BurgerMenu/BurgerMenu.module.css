@@ -23,7 +23,7 @@ div.menu__button svg {
     z-index: 5;
 }
 
-div.menu__body ul {
+nav.menu__body ul {
     margin: 0;
     padding: 0;
     list-style: none; 
@@ -33,19 +33,12 @@ div.menu__body ul {
     margin-bottom: 40px;
 }
 
-.burger__list__item span:not(:last-child) {
-    margin-right: 24px;
-}
 
 @media (max-width: 768px) {
 
     .menu__body {
         padding-left: 15px;
         padding-top: 40px;
-    }
-
-    .burger__list__item span:not(:last-child) {
-        margin-right: 29px;
     }
 
 }

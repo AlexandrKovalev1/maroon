@@ -30,7 +30,6 @@ const SectionOffer = () => {
             <div className={classes.img__wrapper}>
                 <img className={classes.img} src={sectionImg} alt="offer img" />
             </div>
-
         </section>
     )
 }
