@@ -3,11 +3,26 @@
 }
 
 .catalog__container {
-    padding: 0 77px;
+    width: 100%;
+    padding: 0 98px;
+    box-sizing: border-box;
 }
 
 .heading__block {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+
+@media (max-width:900px) {
+    .catalog__container {
+        padding: 0 45px;
+    }
+}
+
+@media (max-width:768px) {
+    .catalog__container {
+        padding: 0 15px;
+    }
 }

@@ -11,7 +11,7 @@
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    padding: 0 77px;
+    padding: 0 98px;
 }
 
 .footer__nav__list {
@@ -38,7 +38,7 @@
 
 .copirates__string {
     display: flex;
-    align-items: end;
+    align-items: flex-end;
 }
 
 @media (max-width:900px) {

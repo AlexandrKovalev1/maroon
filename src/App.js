@@ -12,15 +12,19 @@ import AnchorPortal from './components/common/AnchorPortal/AnchorPortal';
 const App = ({ router, ...props }) => {
 
   let urlPathName = router.location.pathname;
-  let homePage = urlPathName === '/home'
-  if (urlPathName === '/' || urlPathName === '/maroon/') { return <Navigate to={'/home'} /> };
+  
+  let homePage = urlPathName === '/home';
+
+  if (urlPathName === '/' || urlPathName === '/maroon/'|| urlPathName === '/maroon') {
+     return <Navigate to={'/home'} /> 
+    };
 
 
 
   return (
     <div>
       <AnchorPortal />
-      <div className={`app__wrapper ${homePage && 'wrapper_homePage'}`}>
+      <div className={`app__wrapper`}>
         {!homePage && <Header />}
         <Routes>
           <Route path='/home' element={<Home />} />
