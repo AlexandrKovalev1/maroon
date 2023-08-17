@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import SortForm from "./SortForm/SortForm"
 import { connect } from 'react-redux';
 import { clearFilters } from '../../redux/goodsReducer';
+import BlockAboutUs from '../common/BlockAboutUs/BlockAboutUs';
+import Goods from './Goods/Goods';
 
 
 const Catalog = (props) => {
@@ -18,6 +20,8 @@ const Catalog = (props) => {
                     <h2>Каталог</h2>
                     <SortForm />
                 </span>
+                <Goods />              
+                <BlockAboutUs />
             </div>
         </main>
     )

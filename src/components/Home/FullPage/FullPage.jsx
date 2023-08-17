@@ -1,10 +1,10 @@
+import classes from './FullPage.module.css'
 import Footer from '../../Footer/Footer'
+import BlockAboutUs from '../../common/BlockAboutUs/BlockAboutUs'
 import SectionBestSellers from './SectionBestSellers/SectionBestSellers'
 import SectionBunner from './SectionBunner/SectionBunner'
 import SectionOffer from './SectionOffer/SectionOffer'
 import SectionOurHistory from './SectionOurHistory/SectionOurHistory'
-import SectionJoinUs from './SectionJoinUs/SectionJoinUs'
-import SectionContacts from './SectionContacts/SectionContacts'
 
 
 
@@ -19,9 +19,7 @@ const FullPage = () => {
 
             <SectionOurHistory />
 
-            <SectionJoinUs />
-
-            <SectionContacts />
+            <BlockAboutUs className={classes.container}/>
 
             <Footer />
         </>

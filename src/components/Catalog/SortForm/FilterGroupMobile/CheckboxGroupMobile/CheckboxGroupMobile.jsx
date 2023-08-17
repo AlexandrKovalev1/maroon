@@ -25,8 +25,8 @@ const CheckboxGroupMobile = ({ value, id, onChange, children, headingGroup, clas
             <div className={classes.heading__wrapper} onClick={toggle}>
                 <h4 style={{ fontSize: '22px' }}>{headingGroup}</h4>
                 {!isOpen
-                    ? <Icon id={'plus'} width={12} height={12} />
-                    : <Icon id={'minus'} width={12} height={2} />}
+                    ? <Icon id={'plus'} width={17} height={17} />
+                    : <Icon id={'minus'} width={17} height={3} />}
             </div>
             {isOpen &&
                 <div className={classes.list__settings_wrapper}>

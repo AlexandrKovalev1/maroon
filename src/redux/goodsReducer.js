@@ -13,6 +13,8 @@ import earthCover from '../img/goodsImg/Earth.png';
 
 const FILTER_GOODS = 'goods-reducer/FILTER_GOODS';
 const CLEAR_FILTERS = 'goods-reducer/CLEAR_FILTERS';
+const GET_INIT_GOODS = 'goods-reducer/GET_INIT_GOODS';
+
 
 let initialState = {
     allGoods: [
@@ -330,7 +332,7 @@ let initialState = {
             methodOfApplication: 'Наносите увлажняющий дневной крем для лица на очищенную кожу лица и шеи. Возьмите небольшое количество крема, разогрейте в ладонях, нанесите легкими надавливающими движениями и выполните дренирующий массаж. ',
         },
     ],
-    filteredGoods: [],
+    initGoods: [],
     bestSellers: [
         {
             id: 1,
@@ -646,6 +648,8 @@ let initialState = {
             methodOfApplication: 'Наносите увлажняющий дневной крем для лица на очищенную кожу лица и шеи. Возьмите небольшое количество крема, разогрейте в ладонях, нанесите легкими надавливающими движениями и выполните дренирующий массаж. ',
         },
     ],
+    isFiltered:false,
+    
 }
 
 
@@ -657,7 +661,7 @@ const goodsReducer = (state = initialState, action) => {
 
                 let { forFace = [], forBody = [], forSkinType = [] } = action.params;
                 let goodsType = [...forFace, ...forBody];
-                let filteredGoods = state.allGoods;
+                let filteredGoods = [];
 
                 if (forSkinType.length > 0) {
                     filteredGoods = state.allGoods.filter(item =>
@@ -666,13 +670,14 @@ const goodsReducer = (state = initialState, action) => {
                 }
 
                 if (goodsType.length > 0) {
-                    filteredGoods = filteredGoods.filter(
+                    filteredGoods = [...state.allGoods].filter(
                         item => goodsType.includes(item.type));
                 }
 
                 return {
                     ...state,
-                    filteredGoods: filteredGoods,
+                    initGoods: filteredGoods,
+                    isFiltered:true,
                 }
             } else {
                 return state;
@@ -680,8 +685,14 @@ const goodsReducer = (state = initialState, action) => {
         case CLEAR_FILTERS:
             return {
                 ...state,
-                filteredGoods: [],
-            }
+                initGoods: [],
+                isFiltered:false,
+            };
+        case GET_INIT_GOODS:
+            return {
+                ...state,
+                initGoods: [...state.allGoods]
+            };
         default:
             return state;
     }
@@ -690,5 +701,6 @@ const goodsReducer = (state = initialState, action) => {
 
 export const filterGoods = (params) => ({ type: FILTER_GOODS, params });
 export const clearFilters = () => ({ type: CLEAR_FILTERS });
+export const getInitGoods = () => ({type: GET_INIT_GOODS});
 
 export default goodsReducer;

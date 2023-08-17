@@ -2,7 +2,6 @@
     position: relative;
     display: grid;
     align-items: center;
-    padding-left: 98px;
     overflow: hidden;
 }
 
@@ -52,9 +51,6 @@
 }
 
 @media (max-width:900px) {
-    .section__contacts {
-        padding-left: 45px;
-    }
 
     .img__wrapper {
         padding-right: 0;
@@ -65,7 +61,6 @@
 @media (max-width:768px) {
     .section__contacts {
         display: block;
-        padding: 0 15px;
     }
 
     .content__wrapper {

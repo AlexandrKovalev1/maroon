@@ -8,6 +8,10 @@
     cursor: pointer;
 }
 
-.list__settings_wrapper {
+.heading__wrapper:hover svg {
+    stroke-width: 2px;
+}
 
+.list__settings_wrapper {
+    padding-top: 20px;
 }

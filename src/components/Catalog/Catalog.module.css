@@ -2,6 +2,10 @@
     border-top: 1px solid rgba(219, 220, 224, 1); 
 }
 
+.catalog__container > *+* {
+    margin-bottom: 160px;
+}
+
 .catalog__container {
     width: 100%;
     padding: 0 98px;

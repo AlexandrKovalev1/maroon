@@ -1,0 +1,15 @@
+.block__wrapper section:not(:last-child) {
+    margin-bottom: 160px;
+}
+
+@media(max-width:900px) {
+    .block__wrapper section:not(:last-child) {
+        margin-bottom: 110px;
+    }
+}
+
+@media(max-width:768px) {
+    .block__wrapper section:not(:last-child) {
+        margin-bottom: 80px;
+    }
+}

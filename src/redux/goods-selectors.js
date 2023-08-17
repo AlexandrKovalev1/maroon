@@ -1,24 +1,19 @@
-import { createSelector } from "reselect";
 
- const getGoods = (state) => {
-    return state.goods.allGoods;
+
+const getInitGoods = (state) => {
+    return state.goods.initGoods;
 }
 
- const getFilteredGoods = (state) => {
-    return state.goods.filteredGoods;
+export const getIsFiltered = (state) => {
+    return state.goods.isFiltered;
 }
+export const getInitGoodsSelector=(getInitGoods,(state)=>{
+    return state.goods.initGoods;
+})
 
 export const getBestSellers = (state) => {
     return state.goods.bestSellers;
 }
 
-export const getFormatedGoods = createSelector(getGoods, getFilteredGoods,
-    (allGoods, filteredGoods) => {
-        if (filteredGoods.length > 0) {
-            return filteredGoods
-        } else {
-            return allGoods
-        }
-    });
 
 

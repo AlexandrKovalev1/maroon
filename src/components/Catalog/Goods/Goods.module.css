@@ -1,0 +1,50 @@
+.goods__wrapper {
+    padding-top: 30px;
+}
+
+
+
+.block__goods {
+    width: 100%;
+    min-height: 380px;
+}
+
+.message__block {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+}
+
+.block__buttons__control {
+    display: flex;
+}
+
+.button {
+    all: unset;
+}
+
+.page__info,
+.block__page__switching__buttons {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.line {
+    width: 58px;
+    height: 2px;
+    margin: 0 4px;
+    background-color: rgba(18, 41, 71, 1);
+}
+
+.button__arrow {
+    stroke: rgba(18, 41, 71, 1);
+    width: 45px;
+    height: 12px;
+    cursor: pointer;
+}
+
+
