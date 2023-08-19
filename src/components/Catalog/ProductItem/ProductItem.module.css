@@ -1,0 +1,33 @@
+.card__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.cover__picture {
+    max-width: 100%;
+}
+
+.product__info {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    width: 87%;
+}
+
+.titles__block,
+.description__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.description__block {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(154, 157, 160, 1)g;
+}
+
+@media (max-width:768px) {
+
+}

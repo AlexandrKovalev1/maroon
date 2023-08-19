@@ -122,10 +122,6 @@ const SortForm = (props) => {
         hidden();
         actions.resetForm();
         props.filterGoods(values);
-        setTimeout(() => {
-          console.log(JSON.stringify(values, null, 2));
-          actions.setSubmitting(false);
-        }, 500);
       }}>
       {({
         errors,

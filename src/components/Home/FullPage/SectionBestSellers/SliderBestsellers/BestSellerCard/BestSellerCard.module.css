@@ -2,6 +2,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    scroll-snap-align: start;
 }
 
 .card__bestSeller_wrapper:not(:last-child) {

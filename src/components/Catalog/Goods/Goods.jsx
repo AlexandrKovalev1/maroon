@@ -1,57 +1,62 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Icon from '../../common/Icon';
 import classes from './Goods.module.css'
 import { connect } from 'react-redux';
-import { getInitGoodsSelector, getIsFiltered } from '../../../redux/goods-selectors';
-import { getInitGoods } from '../../../redux/goodsReducer';
+import { getInitGoodsSelector, getIsFiltered, getProducts } from '../../../redux/goods-selectors';
+import { getInitGoods, putPageProducts } from '../../../redux/goodsReducer';
+import usePageSwitcher from '../../common/hooks/usePageSwitcher';
+import ProductItem from '../ProductItem/ProductItem';
 
-const Goods = ({ initGoods, getInitGoods, isFiltered }) => {
+
+
+
+const Goods = ({ initGoods, getInitGoods, isFiltered,pageProducts,putPageProducts }) => {
+    let lastPage;
     let countGoodsOnPage = 12;
-    let desableIncriment = false;
-    let desableDecrement = false;
-    let countPages = Math.ceil(initGoods.length / countGoodsOnPage);
+    let countPages = lastPage = Math.ceil(initGoods.length / countGoodsOnPage);
 
-    console.log(desableIncriment);
+    let [currentPage, nextDisabled,
+        prevDesabled, incremented,
+        decremented] = usePageSwitcher(lastPage)
 
-    let [currentPage, setCurrentPage] = useState(1);
-    const incrementPage = (e) => {
-        if (currentPage < countPages) {
-            desableIncriment = false;
-            return setCurrentPage(currentPage + 1)
-        } else {
-            return desableIncriment = true;
-        }
-    }
+        console.log(currentPage)
 
-    const decrementPage = () => {
-        if (currentPage > 1) {
-            desableDecrement = false;
-            return setCurrentPage(currentPage - 1)
-        } else {
-            return desableDecrement = true;
-        }
-    }
+    useEffect(() => {
+        if (!initGoods.length && !isFiltered) { getInitGoods() };
+        putPageProducts(currentPage, countGoodsOnPage);
+        console.log('effect')
+    }, [initGoods,currentPage]);
 
     let isNothingFound = Boolean(isFiltered && !initGoods.length);
 
+    let classLastPage = currentPage === lastPage ? 'bold' : "normal";
 
+    let products = pageProducts.map(item => <ProductItem
+        id={item.id}
+        key={item.id}
+        coverPicture={item.coverPicture}
+        title={item.title}
+        price={item.options[0].price}
+        volume={item.options[0].volume}
+        about={item.smallDescription}
+    />)
 
-    console.log(initGoods)
-    useEffect(() => {
-        if (!initGoods.length && !isFiltered) getInitGoods();
-        setCurrentPage(1);
-    }, [initGoods, desableDecrement, desableDecrement])
 
     return (
         <div className={classes.goods__wrapper}>
-            <div className={classes.block__goods}>
-                {isNothingFound && <div className={classes.message__block}>
-                    <span>
-                        Ничего не найдено 🙈
-                    </span>
-                </div>}
-                {!isNothingFound}
-            </div>
+            {isNothingFound && <div className={classes.message__block} style={{ minHeight: '380px', width: '100%' }}>
+                <span>
+                    Ничего не найдено 🙈
+                </span>
+            </div>}
+
+
+            {!isNothingFound && <div className={classes.block__goods}>
+                {products}
+            </div>}
+
+
+
             <div className={classes.block__buttons__control}>
                 <div className={classes.page__info}>
                     <span>
@@ -59,17 +64,17 @@ const Goods = ({ initGoods, getInitGoods, isFiltered }) => {
                     </span>
                     <span className={classes.line}>
                     </span>
-                    <span>
+                    <span className={classes[classLastPage]}>
                         {countPages}
                     </span>
                 </div>
                 <div className={classes.block__page__switching__buttons}>
 
-                    <button className={classes.button} onClick={decrementPage} disabled={desableDecrement}>
+                    <button className={classes.button} disabled={prevDesabled} onClick={decremented}>
                         <Icon id={'arrowLeft'} className={classes.button__arrow} />
                     </button>
 
-                    <button className={classes.button} disabled={desableIncriment} onClick={incrementPage} >
+                    <button className={classes.button} disabled={nextDisabled} onClick={incremented}>
                         <Icon id={'arrowRight'} className={classes.button__arrow} />
                     </button>
 
@@ -82,6 +87,7 @@ const Goods = ({ initGoods, getInitGoods, isFiltered }) => {
 let mapStateToProps = (state) => ({
     initGoods: getInitGoodsSelector(state),
     isFiltered: getIsFiltered(state),
+    pageProducts: getProducts(state),
 })
 
-export default connect(mapStateToProps, { getInitGoods })(Goods);
+export default connect(mapStateToProps, { getInitGoods,putPageProducts })(Goods);

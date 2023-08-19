@@ -14,7 +14,7 @@ import earthCover from '../img/goodsImg/Earth.png';
 const FILTER_GOODS = 'goods-reducer/FILTER_GOODS';
 const CLEAR_FILTERS = 'goods-reducer/CLEAR_FILTERS';
 const GET_INIT_GOODS = 'goods-reducer/GET_INIT_GOODS';
-
+const PUT_PAGE_PRODUCTS = 'goods-reducer/PUT_PAGE_PRODUCTS';
 
 let initialState = {
     allGoods: [
@@ -333,6 +333,7 @@ let initialState = {
         },
     ],
     initGoods: [],
+    productsPage: [],
     bestSellers: [
         {
             id: 1,
@@ -648,8 +649,8 @@ let initialState = {
             methodOfApplication: 'Наносите увлажняющий дневной крем для лица на очищенную кожу лица и шеи. Возьмите небольшое количество крема, разогрейте в ладонях, нанесите легкими надавливающими движениями и выполните дренирующий массаж. ',
         },
     ],
-    isFiltered:false,
-    
+    isFiltered: false,
+
 }
 
 
@@ -677,7 +678,7 @@ const goodsReducer = (state = initialState, action) => {
                 return {
                     ...state,
                     initGoods: filteredGoods,
-                    isFiltered:true,
+                    isFiltered: true,
                 }
             } else {
                 return state;
@@ -686,13 +687,43 @@ const goodsReducer = (state = initialState, action) => {
             return {
                 ...state,
                 initGoods: [],
-                isFiltered:false,
+                isFiltered: false,
             };
         case GET_INIT_GOODS:
+
             return {
                 ...state,
                 initGoods: [...state.allGoods]
             };
+        case PUT_PAGE_PRODUCTS:
+            let page = [];
+            let countPages = Math.ceil(state.initGoods / action.countGoodsOnPage)
+
+            if (action.currentPage < 1) {
+                return { ...state, productsPage: [] }
+            } else if (action.currentPage === countPages) {
+                page = state.initGoods.slice(
+                    (action.countGoodsOnPage * (action.currentPage - 1)),
+                    (state.initGoods.length)
+                );
+                return {
+                    ...state,
+                    productsPage: page,
+                }
+            } else {
+
+                page = state.initGoods.slice(
+                    (action.countGoodsOnPage * (action.currentPage - 1)),
+                    (action.countGoodsOnPage * action.currentPage)
+                );
+
+                return {
+                    ...state,
+                    productsPage: page,
+                }
+            }
+
+
         default:
             return state;
     }
@@ -701,6 +732,12 @@ const goodsReducer = (state = initialState, action) => {
 
 export const filterGoods = (params) => ({ type: FILTER_GOODS, params });
 export const clearFilters = () => ({ type: CLEAR_FILTERS });
-export const getInitGoods = () => ({type: GET_INIT_GOODS});
+export const getInitGoods = () => ({ type: GET_INIT_GOODS });
+export const putPageProducts = (currentPage = 0, countGoodsOnPage = 0) => (
+    {
+        type: PUT_PAGE_PRODUCTS,
+        currentPage,
+        countGoodsOnPage,
+    })
 
 export default goodsReducer;
