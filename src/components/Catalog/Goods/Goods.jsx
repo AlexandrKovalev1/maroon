@@ -1,35 +1,26 @@
 import { useEffect } from 'react';
-import Icon from '../../common/Icon';
 import classes from './Goods.module.css'
 import { connect } from 'react-redux';
 import { getInitGoodsSelector, getIsFiltered, getProducts } from '../../../redux/goods-selectors';
-import { getInitGoods, putPageProducts } from '../../../redux/goodsReducer';
-import usePageSwitcher from '../../common/hooks/usePageSwitcher';
-import ProductItem from '../ProductItem/ProductItem';
+import { filterGoods, getInitGoods, putPageProducts } from '../../../redux/goodsReducer';
+import ProductItem from './ProductItem/ProductItem';
+import BlockButtonsControl from '../../common/BlockButtonsControl/BlockButtonsControl';
 
 
 
 
-const Goods = ({ initGoods, getInitGoods, isFiltered,pageProducts,putPageProducts }) => {
-    let lastPage;
-    let countGoodsOnPage = 12;
-    let countPages = lastPage = Math.ceil(initGoods.length / countGoodsOnPage);
+const Goods = ({ initGoods, getInitGoods, isFiltered, pageProducts, putPageProducts, filterGoods, ...props }) => {
 
-    let [currentPage, nextDisabled,
-        prevDesabled, incremented,
-        decremented] = usePageSwitcher(lastPage)
 
-        console.log(currentPage)
+console.log('re')
 
     useEffect(() => {
         if (!initGoods.length && !isFiltered) { getInitGoods() };
-        putPageProducts(currentPage, countGoodsOnPage);
-        console.log('effect')
-    }, [initGoods,currentPage]);
+    }, [initGoods]);
 
     let isNothingFound = Boolean(isFiltered && !initGoods.length);
 
-    let classLastPage = currentPage === lastPage ? 'bold' : "normal";
+
 
     let products = pageProducts.map(item => <ProductItem
         id={item.id}
@@ -55,31 +46,14 @@ const Goods = ({ initGoods, getInitGoods, isFiltered,pageProducts,putPageProduct
                 {products}
             </div>}
 
+            <BlockButtonsControl
+
+                initStateArr={initGoods}
+                countItemsOnPage={12}
+                putPageItemsFunc={putPageProducts}
+            />
 
 
-            <div className={classes.block__buttons__control}>
-                <div className={classes.page__info}>
-                    <span>
-                        {currentPage}
-                    </span>
-                    <span className={classes.line}>
-                    </span>
-                    <span className={classes[classLastPage]}>
-                        {countPages}
-                    </span>
-                </div>
-                <div className={classes.block__page__switching__buttons}>
-
-                    <button className={classes.button} disabled={prevDesabled} onClick={decremented}>
-                        <Icon id={'arrowLeft'} className={classes.button__arrow} />
-                    </button>
-
-                    <button className={classes.button} disabled={nextDisabled} onClick={incremented}>
-                        <Icon id={'arrowRight'} className={classes.button__arrow} />
-                    </button>
-
-                </div>
-            </div>
         </div>
     )
 }
@@ -90,4 +64,4 @@ let mapStateToProps = (state) => ({
     pageProducts: getProducts(state),
 })
 
-export default connect(mapStateToProps, { getInitGoods,putPageProducts })(Goods);
+export default connect(mapStateToProps, { getInitGoods, putPageProducts, filterGoods })(Goods);

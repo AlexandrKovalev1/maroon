@@ -122,6 +122,7 @@ const SortForm = (props) => {
         hidden();
         actions.resetForm();
         props.filterGoods(values);
+        localStorage.setItem('filters',JSON.stringify(values))
       }}>
       {({
         errors,

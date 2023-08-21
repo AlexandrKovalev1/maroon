@@ -332,8 +332,10 @@ let initialState = {
             methodOfApplication: 'Наносите увлажняющий дневной крем для лица на очищенную кожу лица и шеи. Возьмите небольшое количество крема, разогрейте в ладонях, нанесите легкими надавливающими движениями и выполните дренирующий массаж. ',
         },
     ],
-    initGoods: [],
-    productsPage: [],
+    initGoods: {
+        allInitGoods: [],
+        pageInitGoods: [],
+    },
     bestSellers: [
         {
             id: 1,
@@ -677,49 +679,72 @@ const goodsReducer = (state = initialState, action) => {
 
                 return {
                     ...state,
-                    initGoods: filteredGoods,
+                    initGoods: {
+                        ...state.initGoods,
+                        allInitGoods: filteredGoods,
+                    },
                     isFiltered: true,
                 }
             } else {
                 return state;
             };
         case CLEAR_FILTERS:
+            localStorage.removeItem('filters')
+
             return {
                 ...state,
-                initGoods: [],
+                initGoods: {
+                    ...state.initGoods,
+                    allInitGoods: [...state.allGoods],
+                },
                 isFiltered: false,
             };
         case GET_INIT_GOODS:
 
             return {
                 ...state,
-                initGoods: [...state.allGoods]
+                initGoods: {
+                    ...state.initGoods,
+                    allInitGoods: [...state.allGoods]
+                }
             };
         case PUT_PAGE_PRODUCTS:
             let page = [];
             let countPages = Math.ceil(state.initGoods / action.countGoodsOnPage)
 
             if (action.currentPage < 1) {
-                return { ...state, productsPage: [] }
+                return {
+                    ...state,
+                    initGoods: {
+                        ...state.initGoods,
+                        pageInitGoods: [],
+                    }
+                }
             } else if (action.currentPage === countPages) {
-                page = state.initGoods.slice(
+                page = state.initGoods.allInitGoods.slice(
                     (action.countGoodsOnPage * (action.currentPage - 1)),
                     (state.initGoods.length)
                 );
                 return {
                     ...state,
-                    productsPage: page,
+                    initGoods: {
+                        ...state.initGoods,
+                        pageInitGoods: page,
+                    }
                 }
             } else {
 
-                page = state.initGoods.slice(
+                page = state.initGoods.allInitGoods.slice(
                     (action.countGoodsOnPage * (action.currentPage - 1)),
                     (action.countGoodsOnPage * action.currentPage)
                 );
 
                 return {
                     ...state,
-                    productsPage: page,
+                    initGoods: {
+                        ...state.initGoods,
+                        pageInitGoods: page,
+                    }
                 }
             }
 

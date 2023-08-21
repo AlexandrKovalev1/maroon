@@ -1,0 +1,63 @@
+.block__buttons__control {
+    display: flex;
+    padding-top: 40px;
+}
+
+.button {
+    all: unset;
+    cursor: pointer;
+}
+
+.button:hover svg {
+    stroke-width: 2px;
+}
+
+.button:disabled:hover {
+    cursor: auto;
+}
+
+.button:disabled:hover svg {
+    stroke-width: 1px;
+}
+
+.page__info,
+.block__page__switching__buttons {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.line {
+    width: 50px;
+    height: 1.5px;
+    margin: 0 10px;
+    background-color: rgba(18, 41, 71, 1);
+}
+
+.normal {
+    color: rgba(154, 157, 160, 1);
+}
+
+
+.button__arrow {
+    stroke: rgba(18, 41, 71, 1);
+    width: 45px;
+    height: 12px;
+    pointer-events: none;
+}
+
+
+@media(max-width:768px) {
+    .block__buttons__control {
+        justify-content: space-between;
+    }
+
+    .page__info {
+        justify-content: flex-start;
+    }
+
+    .line {
+        width: 30px;
+    }
+}

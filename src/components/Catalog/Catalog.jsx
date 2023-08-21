@@ -1,5 +1,5 @@
 import classes from './Catalog.module.css';
-import { useEffect } from "react";
+import { useEffect} from "react";
 import SortForm from "./SortForm/SortForm"
 import { connect } from 'react-redux';
 import { clearFilters } from '../../redux/goodsReducer';
@@ -9,8 +9,11 @@ import Goods from './Goods/Goods';
 
 const Catalog = (props) => {
 
+
     useEffect(() => {
-        return () => { props.clearFilters() }
+        return () => {
+            props.clearFilters();
+        }
     }, [])
 
     return (
@@ -20,7 +23,7 @@ const Catalog = (props) => {
                     <h2>Каталог</h2>
                     <SortForm />
                 </span>
-                <Goods />              
+                <Goods />
                 <BlockAboutUs />
             </div>
         </main>
