@@ -52,6 +52,10 @@
     grid-area: group1;
 }
 
+.group__one input label.custom__checkbox {
+    display: none;
+}
+
 .group__two {
     grid-area: group2;
 }
@@ -76,6 +80,9 @@
     border: 2px solid rgba(18, 41, 71, 1);
 }
 
+.transform__first__before__group::before {
+    transform: translate(-44%, -55%);
+}
 
 @media (max-width:900px) {
     .form {

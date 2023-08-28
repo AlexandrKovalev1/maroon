@@ -1,4 +1,4 @@
-import goodsReducer, { clearFilters, filterGoods } from "./goodsReducer"
+import goodsReducer, { addProductToRecentl, clearFilters, filterGoods } from "./goodsReducer"
 
 
 let state = {
@@ -306,7 +306,14 @@ let state = {
             methodOfApplication: 'Наносите увлажняющий дневной крем для лица на очищенную кожу лица и шеи. Возьмите небольшое количество крема, разогрейте в ладонях, нанесите легкими надавливающими движениями и выполните дренирующий массаж. ',
         },
     ],
-    initGoods: [],
+    initGoods: {
+        allInitGoods: [],
+        pageInitGoods: [],
+    },
+    initRecentesGoods: {
+        allRecentesGoods: [],
+        pageRecentesGoods: [],
+    },
 }
 
 
@@ -318,7 +325,7 @@ it('the array must be filtered by the given parameters', () => {
     let filteredState = goodsReducer(state, action);
 
     //3.expectation 
-    expect(filteredState.initGoods[0].id).toBe(33);
+    expect(filteredState.initGoods.allInitGoods[0].id).toBe(33);
 });
 
 
@@ -331,6 +338,19 @@ it('the filtered array should be cleared', () => {
     let filteredState = goodsReducer(state, action);
 
     //3.expectation 
-    expect(filteredState.initGoods.length).toBe(0);
+    expect(filteredState.initGoods.allInitGoods.length).toBe(filteredState.allGoods.length);
+
+});
+
+it('item should be added to recentl', () => {
+
+    //1. test data
+    let action = addProductToRecentl(4);
+
+    //2. action
+    let initState = goodsReducer(state, action);
+
+    //3.expectation 
+    expect(initState.initRecentesGoods.allRecentesGoods[0].id).toBe(4);
 
 });

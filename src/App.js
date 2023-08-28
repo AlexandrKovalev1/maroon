@@ -30,7 +30,7 @@ const App = ({ router, ...props }) => {
         <Routes>
           <Route path='/home' element={<Home />} />
           <Route path='/catalog/' element={<Catalog />} />
-          <Route path='/product/:idProduct' element={<FullCardProduct />} />
+          <Route path='/product/:idProduct?' element={<FullCardProduct />} />
         </Routes>
         {!homePage && <Footer />}
       </div>

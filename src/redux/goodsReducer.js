@@ -14,7 +14,10 @@ import earthCover from '../img/goodsImg/Earth.png';
 const FILTER_GOODS = 'goods-reducer/FILTER_GOODS';
 const CLEAR_FILTERS = 'goods-reducer/CLEAR_FILTERS';
 const GET_INIT_GOODS = 'goods-reducer/GET_INIT_GOODS';
-const PUT_PAGE_PRODUCTS = 'goods-reducer/PUT_PAGE_PRODUCTS';
+const ADD_PRODUCT_TO_REСENTL = 'goods-reducer/ADD_PRODUCT_TO_REСENTL';
+const GET_PRODUCT = 'goods-reducer/GET_PRODUCT';
+
+
 
 let initialState = {
     allGoods: [
@@ -24,11 +27,13 @@ let initialState = {
             title: 'High',
             options: [
                 {
+                    id: '9496',
                     volume: '30ml',
                     price: 790,
                     availability: true,
                 },
                 {
+                    id: '2391',
                     volume: '50ml',
                     price: 990,
                     availability: true,
@@ -49,11 +54,13 @@ let initialState = {
             title: 'Rest',
             options: [
                 {
+                    id: '5121',
                     volume: '20g',
                     price: 690,
                     availability: true,
                 },
                 {
+                    id: '5429',
                     volume: '45g',
                     price: 1099,
                     availability: true,
@@ -74,11 +81,13 @@ let initialState = {
             title: 'Rose',
             options: [
                 {
+                    id: '465',
                     volume: '50ml',
                     price: 890,
                     availability: true,
                 },
                 {
+                    id: '878',
                     volume: '30ml',
                     price: 599,
                     availability: true,
@@ -99,11 +108,13 @@ let initialState = {
             title: 'Milk',
             options: [
                 {
+                    id: '9546',
                     volume: '150ml',
                     price: 790,
                     availability: true,
                 },
                 {
+                    id: '9979',
                     volume: '300ml',
                     price: 1099,
                     availability: true,
@@ -124,11 +135,13 @@ let initialState = {
             title: 'Paradise',
             options: [
                 {
+                    id: '2075',
                     volume: '15g',
                     price: 590,
                     availability: true,
                 },
                 {
+                    id: '9059',
                     volume: '40g',
                     price: 890,
                     availability: true,
@@ -149,6 +162,7 @@ let initialState = {
             title: 'Sun',
             options: [
                 {
+                    id: '3392',
                     volume: '20g',
                     price: 90,
                     availability: true,
@@ -168,11 +182,13 @@ let initialState = {
             title: 'Violet',
             options: [
                 {
+                    id: '4200',
                     volume: '50ml',
                     price: 690,
                     availability: true,
                 },
                 {
+                    id: '8171',
                     volume: '150ml',
                     price: 1099,
                     availability: true,
@@ -193,11 +209,13 @@ let initialState = {
             title: 'Clean',
             options: [
                 {
+                    id: '2448',
                     volume: '100g',
                     price: 490,
                     availability: true,
                 },
                 {
+                    id: '2664',
                     volume: '50g',
                     price: 350,
                     availability: true,
@@ -218,11 +236,13 @@ let initialState = {
             title: 'Coconut',
             options: [
                 {
+                    id: '1536',
                     volume: '300ml',
                     price: 990,
                     availability: true,
                 },
                 {
+                    id: '6095',
                     volume: '500ml',
                     price: 1099,
                     availability: true,
@@ -243,11 +263,13 @@ let initialState = {
             title: 'Lavender',
             options: [
                 {
+                    id: '6893',
                     volume: '20g',
                     price: 690,
                     availability: true,
                 },
                 {
+                    id: '6301',
                     volume: '45g',
                     price: 1099,
                     availability: true,
@@ -268,11 +290,13 @@ let initialState = {
             title: 'Lotos',
             options: [
                 {
+                    id: '8569',
                     volume: '50ml',
                     price: 890,
                     availability: true,
                 },
                 {
+                    id: '4729',
                     volume: '30ml',
                     price: 699,
                     availability: true,
@@ -293,6 +317,7 @@ let initialState = {
             title: 'Earth',
             options: [
                 {
+                    id: '9940',
                     volume: '20g',
                     price: 90,
                     availability: true,
@@ -312,11 +337,13 @@ let initialState = {
             title: 'Highi',
             options: [
                 {
+                    id: '5404',
                     volume: '30ml',
                     price: 790,
                     availability: true,
                 },
                 {
+                    id: '9890',
                     volume: '50ml',
                     price: 990,
                     availability: true,
@@ -332,122 +359,22 @@ let initialState = {
             methodOfApplication: 'Наносите увлажняющий дневной крем для лица на очищенную кожу лица и шеи. Возьмите небольшое количество крема, разогрейте в ладонях, нанесите легкими надавливающими движениями и выполните дренирующий массаж. ',
         },
     ],
-    initGoods: {
-        allInitGoods: [],
-        pageInitGoods: [],
-    },
+    initGoods: [],
+    initRecentesGoods: [],
     bestSellers: [
         {
-            id: 1,
-            coverPicture: highCover,
-            title: 'High',
-            options: [
-                {
-                    volume: '30ml',
-                    price: 790,
-                    availability: true,
-                },
-                {
-                    volume: '50ml',
-                    price: 990,
-                    availability: true,
-                },
-
-            ],
-            forSkinType: ['Сухая', 'Нормальная'],
-            designation: 'forFace',
-            type: 'Крема для лица',
-            smallDescription: 'крем для лица',
-            aboutInfo: 'Дневной крем для лица с гиалуроновой кислотой и органическим экстрактом каланхоэ интенсивно увлажняет кожу. В основе формулы – комплекс Hyaluronic Power, разработанный Лабораториями Clarins, который запускает естественные механизмы увлажнения кожи и помогает сохранять запасы ее влаги. Увлажняющий крем подходит для сухой и нормальной кожи. ',
-            composition: 'AQUA/WATER/EAU. CAPRYLIC/CAPRIC TRIGLYCERIDE. BETAINE. PROPANEDIOL. CETEARYL ALCOHOL. GLYCERIN. PENTYLENE GLYCOL. SILICA. GLYCERYL STEARATE. PEG-100 STEARATE. STEARYL ALCOHOL. DIMETHICONE. HYDROXYETHYL ACRYLATE/SODIUM ACRYLOYLDIMETHYL TAURATE COPOLYMER. CETEARYL GLUCOSIDE. SQUALANE. PARFUM/FRAGRANCE. HYDROXYACETOPHENONE. SODIUM HYALURONATE. CHLORPHENESIN. ETHYLHEXYLGLYCERIN. TOCOPHERYL ACETATE. DIMETHICONOL. POLYSORBATE 60. TOCOPHEROL. DISODIUM EDTA. BUTYLENE GLYCOL. SORBITAN ISOSTEARATE. KALANCHOE PINNATA LEAF EXTRACT. MARRUBIUM VULGARE EXTRACT. CITRIC ACID. PHENETHYL ALCOHOL. FURCELLARIA LUMBRICALIS EXTRACT. SODIUM BENZOATE. POTASSIUM SORBATE. LAPSANA COMMUNIS FLOWER/LEAF/STEM EXTRACT. MARIS SAL/SEA SALT/SEL MARIN. [V4181A]',
-            methodOfApplication: 'Наносите увлажняющий дневной крем для лица на очищенную кожу лица и шеи. Возьмите небольшое количество крема, разогрейте в ладонях, нанесите легкими надавливающими движениями и выполните дренирующий массаж. ',
-        },
-        {
-            id: 3,
-            coverPicture: restCover,
-            title: 'Rest',
-            options: [
-                {
-                    volume: '20g',
-                    price: 690,
-                    availability: true,
-                },
-                {
-                    volume: '45g',
-                    price: 1099,
-                    availability: true,
-                },
-
-            ],
-            forSkinType: ['Жирная'],
-            designation: 'forFace',
-            type: 'Пудры',
-            smallDescription: 'минеральная пудра',
-            aboutInfo: 'Компактная пудра для лица освежает и матирует, не пересушивая кожу. Предотвращает появление прыщей благодаря зелёному чаю и минеральной пудре в составе. Не содержит тальк. Не провоцирует закупоривание пор. Уникальная технология Pollu-Barrier™ защищает кожу от вредного воздействия окружающей среды, уменьшает риск появления новых высыпаний и раздражений.',
-            composition: 'Слюда, алюминия крахмал октенилсукцинат, полиметил метакрилат, диоксид кремния, октилдодецил стеароил стеарат, полиэтилен, полипропилен, фитосквалан, триэтоксикаприлилсилан, диметилсилилат диоксида кремния, сорбитан изостеарат, экстракт листьев зеленого чая, экстракт хлопка, масло лаванды, масло цветов розы, масло можжевельника мексиканского, каприлик/каприловый триглицерид, 1,2-гександиол, метикон, глицерил каприлат, вода, бутиленгликоль, цетеариловый спирт, глицерил стеарат, стеариновая кислота, фильтрат фермента альтеромоноса, этилгексил изононаноат, фитостерил/изостеарил/цетил/стеарил/бегенил димер дилинолеат, стерол соевый, гидроксипропил БИС-пальмитамид МЕА, натрия ПКК, эстолид пенника лугового, лактат натрия, лецитин, керамид NP, цетеариловый глюкозид, гидрогенизированный полидецен, аргинин, гидроксиэтил мочевины, аспарагиновая кислота, пирролидонкарбоновая кислота, гликосфинголипиды, глицерил цитрат/лактат/линолеат/олеат, цетеарет-20, масло ши, глицин, аланин, серин, валин, дикалия глицирризат, изолейцин, треонин, пролин, фенилаланин, гистидин, керамид AP, токоферил ацетат, линалоол, цитронеллол, гераниол.',
-            methodOfApplication: 'С помощью спонжа нанесите пудру на лицо или участки кожи, склонные к жирности.',
-        },
-        {
-            id: 4,
-            coverPicture: roseCover,
-            title: 'Rose',
-            options: [
-                {
-                    volume: '50ml',
-                    price: 890,
-                    availability: true,
-                },
-                {
-                    volume: '30ml',
-                    price: 599,
-                    availability: true,
-                },
-
-            ],
-            forSkinType: ['Нормальная'],
-            designation: 'forFace',
-            type: 'Крема для лица',
-            smallDescription: 'крем для лица',
-            aboutInfo: 'Увлажняющий крем идеально подходит для повседневного ухода за молодой кожей.Крем равномерно распределяется по поверхности благодаря легкой текстуре, обеспечивает глубокое увлажнение, регенерацию клеток. ',
-            composition: 'Aqua, Cyclomethicone, Dicaprylyl Carbonate, Butylene Glycol, Glycerin, Tapioca Starch, Nelumbium Speciosum Flower Extract, Calendula Officinalis Flower Extract, Propylene Glycol, Tocopherol, Glycine Soja Oil, Dimethiconol, Citronellol, Limonene.',
-            methodOfApplication: 'Нанесите крем на очищенную кожу лица легкими массажными круговыми движениями, избегая области вокруг глаз. Подходит для дневного и ночного ухода.',
-        },
-        {
-            id: 5,
-            coverPicture: milkCover,
-            title: 'Milk',
-            options: [
-                {
-                    volume: '150ml',
-                    price: 790,
-                    availability: true,
-                },
-                {
-                    volume: '300ml',
-                    price: 1099,
-                    availability: true,
-                },
-
-            ],
-            forSkinType: ['Комбинированная'],
-            designation: 'forBody',
-            type: 'Масла',
-            smallDescription: 'масло для тела',
-            aboutInfo: '100% натуральное косметическое кокосовое масло для ухода за кожей лица и тела, а также для волос.Кокосовое масло содержит витамины А, С, Е, природные антиоксиданты и насыщенные жирные кислоты, одна из них - гиалуроновая кислота, которая является самым сильным увлажнителем.Масло кокоса обладает защитными, смягчающими и разглаживающим действиями, что обеспечивает эффективный уход за волосами и кожей. Оно является замечательным натуральным размягчителем, оказывает питательное, увлажняющее и противовоспалительное действие.Примечательно, что натуральное кокосовое масло - это один из лучших источников питательных веществ. Масло способствует мешает потере белка во время мытья. Косметическое кокосовое масло покрывает волос защитным слоем, что препятствует набуханию, а также повреждению волос при сушке полотенцем и при расчесывании, способствует росту и укреплению волос, освобождает от перхоти и восстанавливает поврежденные волосы. Питает кожу головы и препятствует выпадению волос.',
-            composition: '100% кокосовое масло.',
-            methodOfApplication: 'Кокосовое масло можно наносить в чистом виде. На его основе можно делать маски для кожи, для лица и для волос. Также коксовое масло можно использовать совместно с другими увлажняющими и питающими средствами для лучшего усвоения полезных веществ. Как альтернативу крему — для питания и увлажнения кожи. Как средство для загара — делает загар ровным, при этом препятствует обезвоживанию и сухости кожи. Как смягчающее и успокаивающее средство после эпиляции, маникюра, педикюра, бритья. Делает кожу гладкой и ровной. Оказывает противовоспалительное действие. Как маска для волос — питает, увлажняет и восстанавливает волосы. Минимизирует потери белка во время мытья.',
-        },
-        {
             id: 6,
             coverPicture: paradiseCover,
             title: 'Paradise',
             options: [
                 {
+                    id: '2075',
                     volume: '15g',
                     price: 590,
                     availability: true,
                 },
                 {
+                    id: '9059',
                     volume: '40g',
                     price: 890,
                     availability: true,
@@ -468,6 +395,7 @@ let initialState = {
             title: 'Sun',
             options: [
                 {
+                    id: '3392',
                     volume: '20g',
                     price: 90,
                     availability: true,
@@ -487,11 +415,13 @@ let initialState = {
             title: 'Violet',
             options: [
                 {
+                    id: '4200',
                     volume: '50ml',
                     price: 690,
                     availability: true,
                 },
                 {
+                    id: '8171',
                     volume: '150ml',
                     price: 1099,
                     availability: true,
@@ -512,11 +442,13 @@ let initialState = {
             title: 'Clean',
             options: [
                 {
+                    id: '2448',
                     volume: '100g',
                     price: 490,
                     availability: true,
                 },
                 {
+                    id: '2664',
                     volume: '50g',
                     price: 350,
                     availability: true,
@@ -537,11 +469,13 @@ let initialState = {
             title: 'Coconut',
             options: [
                 {
+                    id: '1536',
                     volume: '300ml',
                     price: 990,
                     availability: true,
                 },
                 {
+                    id: '6095',
                     volume: '500ml',
                     price: 1099,
                     availability: true,
@@ -562,11 +496,13 @@ let initialState = {
             title: 'Lavender',
             options: [
                 {
+                    id: '6893',
                     volume: '20g',
                     price: 690,
                     availability: true,
                 },
                 {
+                    id: '6301',
                     volume: '45g',
                     price: 1099,
                     availability: true,
@@ -587,11 +523,13 @@ let initialState = {
             title: 'Lotos',
             options: [
                 {
+                    id: '8569',
                     volume: '50ml',
                     price: 890,
                     availability: true,
                 },
                 {
+                    id: '4729',
                     volume: '30ml',
                     price: 699,
                     availability: true,
@@ -612,6 +550,7 @@ let initialState = {
             title: 'Earth',
             options: [
                 {
+                    id: '9940',
                     volume: '20g',
                     price: 90,
                     availability: true,
@@ -631,11 +570,13 @@ let initialState = {
             title: 'Highi',
             options: [
                 {
+                    id: '5404',
                     volume: '30ml',
                     price: 790,
                     availability: true,
                 },
                 {
+                    id: '9890',
                     volume: '50ml',
                     price: 990,
                     availability: true,
@@ -651,6 +592,7 @@ let initialState = {
             methodOfApplication: 'Наносите увлажняющий дневной крем для лица на очищенную кожу лица и шеи. Возьмите небольшое количество крема, разогрейте в ладонях, нанесите легкими надавливающими движениями и выполните дренирующий массаж. ',
         },
     ],
+    productCard: {},
     isFiltered: false,
 
 }
@@ -679,10 +621,7 @@ const goodsReducer = (state = initialState, action) => {
 
                 return {
                     ...state,
-                    initGoods: {
-                        ...state.initGoods,
-                        allInitGoods: filteredGoods,
-                    },
+                    initGoods: filteredGoods,
                     isFiltered: true,
                 }
             } else {
@@ -693,61 +632,54 @@ const goodsReducer = (state = initialState, action) => {
 
             return {
                 ...state,
-                initGoods: {
-                    ...state.initGoods,
-                    allInitGoods: [...state.allGoods],
-                },
+                initGoods: [...state.allGoods],
                 isFiltered: false,
             };
         case GET_INIT_GOODS:
 
             return {
                 ...state,
-                initGoods: {
-                    ...state.initGoods,
-                    allInitGoods: [...state.allGoods]
-                }
+                initGoods: [...state.allGoods]
             };
-        case PUT_PAGE_PRODUCTS:
-            let page = [];
-            let countPages = Math.ceil(state.initGoods / action.countGoodsOnPage)
+        case ADD_PRODUCT_TO_REСENTL:
 
-            if (action.currentPage < 1) {
-                return {
-                    ...state,
-                    initGoods: {
-                        ...state.initGoods,
-                        pageInitGoods: [],
+            let recentItems = state.initRecentesGoods;
+
+            let isFonndItem = Boolean(
+                recentItems.find(item =>
+                    item.id === action.id
+                )
+            );
+
+            let newRecentGood = state.initGoods.find(item => item.id === action.id);
+
+
+
+            if (!isFonndItem) {
+
+                if (recentItems.length <= 14) {
+                    return {
+                        ...state,
+                        initRecentesGoods: [...recentItems, newRecentGood],
                     }
-                }
-            } else if (action.currentPage === countPages) {
-                page = state.initGoods.allInitGoods.slice(
-                    (action.countGoodsOnPage * (action.currentPage - 1)),
-                    (state.initGoods.length)
-                );
-                return {
-                    ...state,
-                    initGoods: {
-                        ...state.initGoods,
-                        pageInitGoods: page,
+                } else {
+
+                    return {
+                        ...state,
+                        initRecentesGoods: [...recentItems.slice(1), newRecentGood],
                     }
+
                 }
+
             } else {
-
-                page = state.initGoods.allInitGoods.slice(
-                    (action.countGoodsOnPage * (action.currentPage - 1)),
-                    (action.countGoodsOnPage * action.currentPage)
-                );
-
-                return {
-                    ...state,
-                    initGoods: {
-                        ...state.initGoods,
-                        pageInitGoods: page,
-                    }
-                }
+                return state;
+            };
+        case GET_PRODUCT:
+            let product = state.allGoods.find(item => item.id === Number(action.id));
+            return {
+                ...state,
+                productCard: product,
             }
-
 
         default:
             return state;
@@ -758,11 +690,8 @@ const goodsReducer = (state = initialState, action) => {
 export const filterGoods = (params) => ({ type: FILTER_GOODS, params });
 export const clearFilters = () => ({ type: CLEAR_FILTERS });
 export const getInitGoods = () => ({ type: GET_INIT_GOODS });
-export const putPageProducts = (currentPage = 0, countGoodsOnPage = 0) => (
-    {
-        type: PUT_PAGE_PRODUCTS,
-        currentPage,
-        countGoodsOnPage,
-    })
+export const addProductToRecentl = (id) => ({ type: ADD_PRODUCT_TO_REСENTL, id });
+export const getProduct = (id) => ({ type: GET_PRODUCT, id });
+
 
 export default goodsReducer;

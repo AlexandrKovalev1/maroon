@@ -3,7 +3,7 @@ import { useCallback, useLayoutEffect, useState } from "react";
 
 const usePageSwitcher = (countPages = 1) => {
 
-    const [currentPage, setPage] = useState(0);
+    const [currentPage, setPage] = useState(1);
     const [disabled, setDisabled] = useState({ next: false, prev: true, });
 
     useLayoutEffect(() => {

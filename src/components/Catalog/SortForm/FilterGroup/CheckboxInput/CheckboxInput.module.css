@@ -40,19 +40,10 @@
     text-align: center;
 }
 
-[type=checkbox]:checked+.custom__checkbox:before {
-    display: inline-block;
-}
-
-.custom__checkbox::before {
-    display: none;
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
+.input__wrapper input[type=checkbox]:checked + .custom__checkbox {
+    width: 11.5px;
+    height: 11.5px;
     background-color: rgba(18, 41, 71, 1);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    border: 3px solid rgba(248, 248, 246, 1);
+    outline:  1px solid rgba(205, 205, 205, 1);
 }

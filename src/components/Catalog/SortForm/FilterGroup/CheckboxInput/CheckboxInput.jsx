@@ -5,6 +5,7 @@ const CheckboxInput = ({
     field: { name, value, onChange },
     id,
     label,
+    secondClass,
     ...props
 }) => {
 
@@ -19,7 +20,7 @@ const CheckboxInput = ({
                 onChange={onChange}
                 className={classes.radio_button}
             />
-            <label htmlFor={id} className={classes.custom__checkbox} ></label>
+            <label htmlFor={id} className={`${secondClass} ${classes.custom__checkbox}`} ></label>
             <label htmlFor={id} className={classes[value?'input_selected':'input_not_selected']} >{label}</label>
         </div>
     );

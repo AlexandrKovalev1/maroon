@@ -1,0 +1,26 @@
+.section__heading {
+    display: flex;
+    width: 100%;
+    margin-bottom: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards__wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 23%);
+    gap: 29px;
+}
+
+@media(max-width:900px) {
+    .cards__wrapper {
+        grid-template-columns: repeat(2, 48%);
+    }
+}
+
+@media(max-width:768px) {
+    .cards__wrapper {
+        grid-template-columns: 1fr;
+    }
+}

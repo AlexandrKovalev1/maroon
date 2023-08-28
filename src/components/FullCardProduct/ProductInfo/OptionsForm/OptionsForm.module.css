@@ -1,0 +1,20 @@
+
+.button {
+    width: 214px;
+}
+
+.block__radio,.block__price {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 45px;
+}
+
+.block__radio>:not(:last-child) {
+    margin-right: 17px;
+}
+.price {
+    padding-right: 49px;
+    font-size: 26px;
+    flex-shrink: 0;
+}

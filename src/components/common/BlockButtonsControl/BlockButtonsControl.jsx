@@ -6,21 +6,20 @@ import classes from './BlockButtonsControl.module.css'
 
 
 
-const BlockButtonsControl = ({ initStateArr, countItemsOnPage, putPageItemsFunc,...props }) => {
+const BlockButtonsControl = ({ initStateArr, countItemsOnPage, setPage, ...props }) => {
 
     let lastPage;
     let countPages = lastPage = Math.ceil(initStateArr.length / countItemsOnPage);
 
-    let [currentPage, nextDisabled,
-        prevDesabled, incremented,
+    let [currentPage, nextDisabledPage,
+        prevDesabledPage, incremented,
         decremented] = usePageSwitcher(lastPage);
-        
+
     useEffect(() => {
-        putPageItemsFunc(currentPage, countItemsOnPage);
-    }, [initStateArr, currentPage])
+        setPage(currentPage);
+    }, [initStateArr, currentPage,setPage])
 
     let classLastPage = currentPage === lastPage ? 'bold' : "normal";
-
 
     return (
         <div className={classes.block__buttons__control}>
@@ -36,11 +35,11 @@ const BlockButtonsControl = ({ initStateArr, countItemsOnPage, putPageItemsFunc,
             </div>
             <div className={classes.block__page__switching__buttons}>
 
-                <button className={classes.button} disabled={prevDesabled} onClick={decremented}>
+                <button className={classes.button} disabled={prevDesabledPage} onClick={decremented}>
                     <Icon id={'arrowLeft'} className={classes.button__arrow} />
                 </button>
 
-                <button className={classes.button} disabled={nextDisabled} onClick={incremented}>
+                <button className={classes.button} disabled={nextDisabledPage} onClick={incremented}>
                     <Icon id={'arrowRight'} className={classes.button__arrow} />
                 </button>
 

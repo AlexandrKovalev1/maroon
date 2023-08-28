@@ -1,0 +1,19 @@
+.block__wrapper {
+    display: grid;
+    border-top: 1px solid rgba(179, 186, 193, 1);
+}
+
+.block__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 51px;
+    padding-right: 15px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.block__content {
+    padding-bottom: 21px;
+}
+

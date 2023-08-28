@@ -1,0 +1,32 @@
+.form__radio {
+    display: flex;
+    align-items: center;
+}
+
+.form__radio input[type=radio] {
+    display: none;
+}
+
+.form__radio label{
+    cursor: pointer;
+}
+
+.custom__label {
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid rgba(205, 205, 205, 1);
+    text-align: center;	
+}
+
+.form__radio input[type=radio]:checked + .custom__label {
+    width: 11.5px;
+    height: 11.5px;
+    background-color: rgba(18, 41, 71, 1);
+    border: 3px solid rgba(248, 248, 246, 1);
+    outline:  1px solid rgba(205, 205, 205, 1);
+}

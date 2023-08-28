@@ -1,0 +1,32 @@
+.productInfo__wrapper {
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    gap: 69px;
+    padding-right: 100px;
+}
+
+.cover__img {
+    max-height: 647px;
+    min-width: 350px;
+    height: 100%;
+    width: 100%;
+}
+
+
+.block__additional__inform {
+    border-bottom: 1px solid rgba(179, 186, 193, 1);
+}
+
+
+
+@media (max-width:900px) {
+    .productInfo__wrapper {
+        width: 100%;
+        padding: 0;
+        display: block;
+    }
+
+    .cover__img {
+        min-width: 0;
+    }
+}
