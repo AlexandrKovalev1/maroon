@@ -17,8 +17,6 @@
     border-bottom: 1px solid rgba(179, 186, 193, 1);
 }
 
-
-
 @media (max-width:900px) {
     .productInfo__wrapper {
         width: 100%;

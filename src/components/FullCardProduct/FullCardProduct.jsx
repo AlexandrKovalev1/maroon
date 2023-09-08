@@ -2,7 +2,7 @@ import { compose } from 'redux';
 import WithRouter from '../hoc/WithRouter';
 import { connect } from 'react-redux';
 import { getProductFull } from '../../redux/goods-selectors';
-import { getProduct } from '../../redux/goodsReducer';
+import { getProduct } from '../../redux/goodsReducer.ts';
 import { Navigate } from 'react-router-dom';
 import BlockProducts from '../common/BlockProducts/BlockProducts';
 import classes from './FullCardProduct.module.css'

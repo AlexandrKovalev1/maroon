@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/maroon/static/css/main.76b2ed1b.css",
-    "main.js": "/maroon/static/js/main.ed8f9a36.js",
+    "main.js": "/maroon/static/js/main.051c08a0.js",
     "static/js/787.577b8feb.chunk.js": "/maroon/static/js/787.577b8feb.chunk.js",
     "static/media/ourHistory.jpg": "/maroon/static/media/ourHistory.6c1691eda2dbde12b34d.jpg",
     "static/media/offer.jpg": "/maroon/static/media/offer.c91571fdb37de859c1a9.jpg",
@@ -34,11 +34,11 @@
     "static/media/svg_sprite.svg": "/maroon/static/media/svg_sprite.ebe08eea34310484d9481a1cac61f966.svg",
     "index.html": "/maroon/index.html",
     "main.76b2ed1b.css.map": "/maroon/static/css/main.76b2ed1b.css.map",
-    "main.ed8f9a36.js.map": "/maroon/static/js/main.ed8f9a36.js.map",
+    "main.051c08a0.js.map": "/maroon/static/js/main.051c08a0.js.map",
     "787.577b8feb.chunk.js.map": "/maroon/static/js/787.577b8feb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.76b2ed1b.css",
-    "static/js/main.ed8f9a36.js"
+    "static/js/main.051c08a0.js"
   ]
 }

@@ -1,7 +1,7 @@
 import classes from './SortForm.module.css'
 import { Formik } from "formik";
 import { connect } from 'react-redux';
-import { clearFilters, filterGoods } from '../../../redux/goodsReducer';
+import { clearFilters, filterGoods } from '../../../redux/goodsReducer.ts';
 import { useState } from 'react';
 import Icon from '../../common/Icon';
 import ButtonCustom from '../../common/ButtonCustom/ButtonCustom';

@@ -1,8 +1,8 @@
-import React, { useLayoutEffect} from 'react';
+import React, { useEffect} from 'react';
 import classes from './Goods.module.css'
 import { connect } from 'react-redux';
 import { getInitGoodsSelector, getIsFiltered } from '../../../redux/goods-selectors';
-import { addProductToRecentl, getInitGoods } from '../../../redux/goodsReducer';
+import { addProductToRecentl, getInitGoods } from '../../../redux/goodsReducer.ts';
 import BlockProducts from '../../common/BlockProducts/BlockProducts';
 
 
@@ -10,7 +10,7 @@ import BlockProducts from '../../common/BlockProducts/BlockProducts';
 const Goods = ({ initGoods, getInitGoods, isFiltered, addProductToRecentl, ...props }) => {
 
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         if (!initGoods.length && !isFiltered) { getInitGoods() };
     }, [initGoods, isFiltered, getInitGoods]);
 

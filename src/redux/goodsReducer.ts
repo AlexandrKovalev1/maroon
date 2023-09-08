@@ -17,9 +17,39 @@ const GET_INIT_GOODS = 'goods-reducer/GET_INIT_GOODS';
 const ADD_PRODUCT_TO_REСENTL = 'goods-reducer/ADD_PRODUCT_TO_REСENTL';
 const GET_PRODUCT = 'goods-reducer/GET_PRODUCT';
 
+type OptionsType = {
+    id: number
+    volume: string
+    price: number
+    availability: boolean
+};
 
 
-let initialState = {
+type InitialStateProductType = {
+    id: number,
+    coverPicture: string | any
+    title: string
+    options: Array<OptionsType>
+    forSkinType: Array<string>
+    designation: string
+    type: string
+    smallDescription: string
+    aboutInfo: string
+    composition: string
+    methodOfApplication: string
+}
+
+
+type InitialStateType = {
+    allGoods: Array<InitialStateProductType>
+    initGoods: Array<InitialStateProductType>
+    initRecentesGoods: Array<InitialStateProductType>
+    bestSellers: Array<InitialStateProductType>
+    productCard: InitialStateProductType | null
+    isFiltered: boolean
+}
+
+let initialState: InitialStateType = {
     allGoods: [
         {
             id: 1,
@@ -27,13 +57,13 @@ let initialState = {
             title: 'High',
             options: [
                 {
-                    id: '9496',
+                    id: 9496,
                     volume: '30ml',
                     price: 790,
                     availability: true,
                 },
                 {
-                    id: '2391',
+                    id: 2391,
                     volume: '50ml',
                     price: 990,
                     availability: true,
@@ -54,13 +84,13 @@ let initialState = {
             title: 'Rest',
             options: [
                 {
-                    id: '5121',
+                    id: 5121,
                     volume: '20g',
                     price: 690,
                     availability: true,
                 },
                 {
-                    id: '5429',
+                    id: 5429,
                     volume: '45g',
                     price: 1099,
                     availability: true,
@@ -81,13 +111,13 @@ let initialState = {
             title: 'Rose',
             options: [
                 {
-                    id: '465',
+                    id: 465,
                     volume: '50ml',
                     price: 890,
                     availability: true,
                 },
                 {
-                    id: '878',
+                    id: 878,
                     volume: '30ml',
                     price: 599,
                     availability: true,
@@ -108,13 +138,13 @@ let initialState = {
             title: 'Milk',
             options: [
                 {
-                    id: '9546',
+                    id: 9546,
                     volume: '150ml',
                     price: 790,
                     availability: true,
                 },
                 {
-                    id: '9979',
+                    id: 9979,
                     volume: '300ml',
                     price: 1099,
                     availability: true,
@@ -135,13 +165,13 @@ let initialState = {
             title: 'Paradise',
             options: [
                 {
-                    id: '2075',
+                    id: 2075,
                     volume: '15g',
                     price: 590,
                     availability: true,
                 },
                 {
-                    id: '9059',
+                    id: 9059,
                     volume: '40g',
                     price: 890,
                     availability: true,
@@ -162,7 +192,7 @@ let initialState = {
             title: 'Sun',
             options: [
                 {
-                    id: '3392',
+                    id: 3392,
                     volume: '20g',
                     price: 90,
                     availability: true,
@@ -182,13 +212,13 @@ let initialState = {
             title: 'Violet',
             options: [
                 {
-                    id: '4200',
+                    id: 4200,
                     volume: '50ml',
                     price: 690,
                     availability: true,
                 },
                 {
-                    id: '8171',
+                    id: 8171,
                     volume: '150ml',
                     price: 1099,
                     availability: true,
@@ -209,13 +239,13 @@ let initialState = {
             title: 'Clean',
             options: [
                 {
-                    id: '2448',
+                    id: 2448,
                     volume: '100g',
                     price: 490,
                     availability: true,
                 },
                 {
-                    id: '2664',
+                    id: 2664,
                     volume: '50g',
                     price: 350,
                     availability: true,
@@ -236,13 +266,13 @@ let initialState = {
             title: 'Coconut',
             options: [
                 {
-                    id: '1536',
+                    id: 1536,
                     volume: '300ml',
                     price: 990,
                     availability: true,
                 },
                 {
-                    id: '6095',
+                    id: 6095,
                     volume: '500ml',
                     price: 1099,
                     availability: true,
@@ -263,13 +293,13 @@ let initialState = {
             title: 'Lavender',
             options: [
                 {
-                    id: '6893',
+                    id: 6893,
                     volume: '20g',
                     price: 690,
                     availability: true,
                 },
                 {
-                    id: '6301',
+                    id: 6301,
                     volume: '45g',
                     price: 1099,
                     availability: true,
@@ -290,13 +320,13 @@ let initialState = {
             title: 'Lotos',
             options: [
                 {
-                    id: '8569',
+                    id: 8569,
                     volume: '50ml',
                     price: 890,
                     availability: true,
                 },
                 {
-                    id: '4729',
+                    id: 4729,
                     volume: '30ml',
                     price: 699,
                     availability: true,
@@ -317,7 +347,7 @@ let initialState = {
             title: 'Earth',
             options: [
                 {
-                    id: '9940',
+                    id: 9940,
                     volume: '20g',
                     price: 90,
                     availability: true,
@@ -337,13 +367,13 @@ let initialState = {
             title: 'Highi',
             options: [
                 {
-                    id: '5404',
+                    id: 5404,
                     volume: '30ml',
                     price: 790,
                     availability: true,
                 },
                 {
-                    id: '9890',
+                    id: 9890,
                     volume: '50ml',
                     price: 990,
                     availability: true,
@@ -368,13 +398,13 @@ let initialState = {
             title: 'Paradise',
             options: [
                 {
-                    id: '2075',
+                    id: 2075,
                     volume: '15g',
                     price: 590,
                     availability: true,
                 },
                 {
-                    id: '9059',
+                    id: 9059,
                     volume: '40g',
                     price: 890,
                     availability: true,
@@ -395,7 +425,7 @@ let initialState = {
             title: 'Sun',
             options: [
                 {
-                    id: '3392',
+                    id: 3392,
                     volume: '20g',
                     price: 90,
                     availability: true,
@@ -415,13 +445,13 @@ let initialState = {
             title: 'Violet',
             options: [
                 {
-                    id: '4200',
+                    id: 4200,
                     volume: '50ml',
                     price: 690,
                     availability: true,
                 },
                 {
-                    id: '8171',
+                    id: 8171,
                     volume: '150ml',
                     price: 1099,
                     availability: true,
@@ -442,13 +472,13 @@ let initialState = {
             title: 'Clean',
             options: [
                 {
-                    id: '2448',
+                    id: 2448,
                     volume: '100g',
                     price: 490,
                     availability: true,
                 },
                 {
-                    id: '2664',
+                    id: 2664,
                     volume: '50g',
                     price: 350,
                     availability: true,
@@ -469,13 +499,13 @@ let initialState = {
             title: 'Coconut',
             options: [
                 {
-                    id: '1536',
+                    id: 1536,
                     volume: '300ml',
                     price: 990,
                     availability: true,
                 },
                 {
-                    id: '6095',
+                    id: 6095,
                     volume: '500ml',
                     price: 1099,
                     availability: true,
@@ -496,13 +526,13 @@ let initialState = {
             title: 'Lavender',
             options: [
                 {
-                    id: '6893',
+                    id: 6893,
                     volume: '20g',
                     price: 690,
                     availability: true,
                 },
                 {
-                    id: '6301',
+                    id: 6301,
                     volume: '45g',
                     price: 1099,
                     availability: true,
@@ -523,13 +553,13 @@ let initialState = {
             title: 'Lotos',
             options: [
                 {
-                    id: '8569',
+                    id: 8569,
                     volume: '50ml',
                     price: 890,
                     availability: true,
                 },
                 {
-                    id: '4729',
+                    id: 4729,
                     volume: '30ml',
                     price: 699,
                     availability: true,
@@ -550,7 +580,7 @@ let initialState = {
             title: 'Earth',
             options: [
                 {
-                    id: '9940',
+                    id: 9940,
                     volume: '20g',
                     price: 90,
                     availability: true,
@@ -570,13 +600,13 @@ let initialState = {
             title: 'Highi',
             options: [
                 {
-                    id: '5404',
+                    id: 5404,
                     volume: '30ml',
                     price: 790,
                     availability: true,
                 },
                 {
-                    id: '9890',
+                    id: 9890,
                     volume: '50ml',
                     price: 990,
                     availability: true,
@@ -592,13 +622,12 @@ let initialState = {
             methodOfApplication: 'Наносите увлажняющий дневной крем для лица на очищенную кожу лица и шеи. Возьмите небольшое количество крема, разогрейте в ладонях, нанесите легкими надавливающими движениями и выполните дренирующий массаж. ',
         },
     ],
-    productCard: {},
+    productCard: null,
     isFiltered: false,
-
 }
 
 
-const goodsReducer = (state = initialState, action) => {
+const goodsReducer = (state = initialState, action: any): InitialStateType => {
 
     switch (action.type) {
         case FILTER_GOODS:
@@ -606,7 +635,7 @@ const goodsReducer = (state = initialState, action) => {
 
                 let { forFace = [], forBody = [], forSkinType = [] } = action.params;
                 let goodsType = [...forFace, ...forBody];
-                let filteredGoods = [];
+                let filteredGoods: Array<InitialStateProductType> = []
 
                 if (forSkinType.length > 0) {
                     filteredGoods = state.allGoods.filter(item =>
@@ -655,7 +684,7 @@ const goodsReducer = (state = initialState, action) => {
 
 
 
-            if (!isFonndItem) {
+            if (!isFonndItem && newRecentGood) {
 
                 if (recentItems.length <= 14) {
                     return {
@@ -676,22 +705,56 @@ const goodsReducer = (state = initialState, action) => {
             };
         case GET_PRODUCT:
             let product = state.allGoods.find(item => item.id === Number(action.id));
-            return {
-                ...state,
-                productCard: product,
+
+            if (product) {
+                return {
+                    ...state,
+                    productCard: product,
+                }
+            } else {
+                return state;
             }
 
         default:
             return state;
+
     }
 }
 
+type FilterGoodsParamsType = {
+    forFace: Array<string>
+    forBody: Array<string>
+    forSkinType: Array<string>
+}
 
-export const filterGoods = (params) => ({ type: FILTER_GOODS, params });
-export const clearFilters = () => ({ type: CLEAR_FILTERS });
-export const getInitGoods = () => ({ type: GET_INIT_GOODS });
-export const addProductToRecentl = (id) => ({ type: ADD_PRODUCT_TO_REСENTL, id });
-export const getProduct = (id) => ({ type: GET_PRODUCT, id });
+type FilterGoodsActionType = {
+    type: typeof FILTER_GOODS
+    params: FilterGoodsParamsType
+}
+
+type ClearFiltersActionType = {
+    type: typeof CLEAR_FILTERS
+}
+
+type GetInitGoodsActionType = {
+    type: typeof GET_INIT_GOODS
+}
+
+type AddToRecentlActionType = {
+    type: typeof ADD_PRODUCT_TO_REСENTL
+    id: number
+}
+
+type GetProductActionType = {
+    type: typeof GET_PRODUCT
+    id: number
+}
+
+export const filterGoods = (params: FilterGoodsParamsType): FilterGoodsActionType => ({ type: FILTER_GOODS, params });
+export const clearFilters = (): ClearFiltersActionType => ({ type: CLEAR_FILTERS });
+export const getInitGoods = (): GetInitGoodsActionType => ({ type: GET_INIT_GOODS });
+export const addProductToRecentl = (id: number): AddToRecentlActionType => ({ type: ADD_PRODUCT_TO_REСENTL, id });
+export const getProduct = (id: number): GetProductActionType => ({ type: GET_PRODUCT, id });
 
 
 export default goodsReducer;
